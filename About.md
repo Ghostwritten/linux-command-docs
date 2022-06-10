@@ -1,8 +1,17 @@
 # Linux Command Docs
 
 - [Linux Command](Linux-Command/README.md)
+  * [Linux Command Alias](Linux-Command/Linux_Command_Alias.md)
+  * [Linux Command Cut](Linux-Command/Linux_Command_cut.md)
+  * [Linux Command Date](Linux-Command/Linux_Command_Date.md)
+  * [Linux Command Gpg](Linux-Command/Linux_Command_gpg.md)
   * [Linux Command Gzip](Linux-Command/Linux_Command_gzip.md)
   * [Linux Command Lz 4](Linux-Command/Linux_Command_lz4.md)
   * [Linux Command Tar](Linux-Command/Linux_Command_tar.md)
+  * [Linux Command Touch](Linux-Command/Linux_Command_touch.md)
   * [Linux Command Zip](Linux-Command/Linux_Command_zip.md)
+  * [Linux Commmand Awk](Linux-Command/Linux_Commmand_awk.md)
+  * [Linux Commnad Sed](Linux-Command/Linux_Commnad_sed.md)
+  * [Linux Commnad Xargs](Linux-Command/Linux_Commnad_xargs.md)
+  * [Linux Command Printf](Linux-Command/Linux-Command_Printf.md)
 * [About](About.md)
