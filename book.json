@@ -67,13 +67,13 @@
     "change_girls" : {
       "time" : 10,
       "urls" : [
-          "https://www.bizhishe.com/d/file/2019-08-26/1566827846505876.jpg", "https://www.bizhishe.com/d/file/2019-07-24/1563977671157231.jpg", "https://www.bizhishe.com/d/file/2019-07-14/1563116649970786.jpg"
+          "https://images2.alphacoders.com/870/870886.jpg", "https://images7.alphacoders.com/110/1104374.jpg", "https://images.alphacoders.com/578/578306.jpg", "https://images3.alphacoders.com/730/730144.jpg","https://images4.alphacoders.com/238/238066.jpg", "https://images3.alphacoders.com/882/882548.jpg", "https://images.alphacoders.com/101/10131.jpg", "https://images7.alphacoders.com/976/976088.jpg"
       ]
     },
 
     "chapter-fold":{},
 
-    "favicon": "assets/imgs/1_girl.ico",
+    "favicon": "assets/imgs/Blade_Runner_Rachel.ico",
 
     "donate": {
       "button": "打赏",
@@ -130,7 +130,7 @@
     },
 
     "insert-logo": {
-      "url": "https://www.bizhishe.com/d/file/2019-07-14/1563116649268975.jpg",
+      "url": "https://images5.alphacoders.com/830/830075.jpg",
       "style": "background: none; max-height: 100px; min-height: 100px"
     },
 
