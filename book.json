@@ -12,6 +12,7 @@
          "weibo": null
      },
      "sidebar": {
+        "Gitbook Docs": "https://smoothies.com.cn/gitbook-docs/",
         "zongxun's Blog": "https://smoothies.com.cn"
      }
   },
@@ -21,7 +22,7 @@
     "advanced-emoji",
     "anchor-navigation-ex",
     "baidu-tongji",
-    "code",
+    "codesnippet",
     "change_girls",
     "custom-favicon",
     "donate",
@@ -30,7 +31,6 @@
     "flexible-alerts",
     "github-buttons",
     "github",
-    "insert-logo",
     "musicxml",
     "prism",
     "pageview-count",
@@ -43,7 +43,8 @@
     "-sharing",
     "sharing-plus",
     "sidebar-style",
-    "theme-comscore",
+    "theme-default",
+    "tags",
     "tbfed-pagefooter"
   ],
   "pluginsConfig": {
@@ -129,11 +130,6 @@
         "token": "9ffc0dce8d7079aceab6b0bc18eb626b"
     },
 
-    "insert-logo": {
-      "url": "https://images.squarespace-cdn.com/content/v1/5bfff88170e802806d993220/1543573748696-WIM9PF8Q6WJDMBOT67N6/2-e1507309739436.jpg?format=1500w",
-      "style": "background: none; max-height: 120px; min-height: 120px"
-    },
-
     "rss": {
       "title": "Linux Command Docs",
       "description": "This is the best book ever.",
@@ -149,15 +145,16 @@
 
     "sharing": {
       "douban": false,
-      "facebook": true,
+      "facebook": false,
       "google": false,
       "pocket": false,
       "qq": false,
       "qzone": false,
-      "twitter": true,
+      "twitter": false,
       "weibo": false,
-    "all": [
-       "facebook", "google", "twitter"
+      "all": [
+        "facebook", "google", "twitter",
+        "weibo", "instapaper"
     ]
    }
   }
