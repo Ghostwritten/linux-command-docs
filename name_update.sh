@@ -33,7 +33,7 @@ cp -f SUMMARY.md About.md
 push_master(){
 
 gitbook build 
-
+sed -i '$a \* \[tags\]\(tags\.md\)' SUMMARY.md
 git add .
 git commit -m "${update}"
 git push origin master

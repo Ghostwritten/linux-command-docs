@@ -1,4 +1,5 @@
 #  Linux Command fio测试磁盘io工具
+tags: 测试
 
 ## 1. 简介
 
