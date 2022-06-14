@@ -1,4 +1,5 @@
 #  linux Command nsenter
+tags: 容器
 
 ## 1. 简介
 [nsenter](https://github.com/jpetazzo/nsenter) 命令是一个可以在指定进程的命令空间下运行指定程序的命令。它位于`util-linux`包中。

@@ -1,4 +1,5 @@
 #  Linux Command split 切割文件
+tags: 文件管理
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/c93a5b789b5149449e9ea45e5d354328.gif#pic_center)
 

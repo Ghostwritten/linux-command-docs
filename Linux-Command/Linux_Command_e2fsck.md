@@ -1,5 +1,5 @@
 #  Linux Command e2fsck
-
+tags: 分析
 ##  1. 简介
 Linux e2fsck命令用于检查使用 Linux ext2 档案系统的 partition 是否正常工作。
 

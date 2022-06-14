@@ -1,5 +1,5 @@
 #  Linux Command zip 压缩
-
+tags: 文件管理
 
 ##  1. 安装
 

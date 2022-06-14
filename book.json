@@ -75,6 +75,11 @@
 
     "favicon": "assets/imgs/Blade_Runner_Rachel.ico",
 
+    "insert-logo": {
+      "url": "https://images3.alphacoders.com/730/730144.jpg",
+      "style": "background: none; max-height: 100px; min-height: 100px"
+    },
+
     "donate": {
       "button": "打赏",
       "alipayText": "支付宝打赏",

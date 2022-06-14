@@ -1,4 +1,5 @@
 #  Linux Command dd 
+tags: 文件管理
 
 ## 1. 简介
 Linux dd 命令用于读取、转换并输出数据。

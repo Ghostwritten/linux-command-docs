@@ -1,5 +1,5 @@
 #  Linux Command  diff 文件比较
-
+tags: 文件管理
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/3d4a795045ee40c98ca47c90dbd2f7a9.gif#pic_center)
 

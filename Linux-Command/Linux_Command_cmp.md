@@ -1,5 +1,5 @@
 #  Linux Command cmp 文件比较
-
+tags: 文件管理
 
 ## 1. 简介
 cmp命令 用来比较两个文件是否有差异。

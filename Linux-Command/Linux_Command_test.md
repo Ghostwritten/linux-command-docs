@@ -1,5 +1,5 @@
 #  Linux Command test
-
+tags: shell
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2bed06f3da22438c8538d7a8c642129c.gif#pic_center)
 

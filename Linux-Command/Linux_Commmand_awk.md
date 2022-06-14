@@ -1,5 +1,5 @@
 #  Linux Command awk 文本匹配
-
+tags: 文件管理
 
 ## 1. 简介
 awk是一个强大的文本分析工具，相对于[grep](https://ghostwritten.blog.csdn.net/article/details/105743476)的查找，[sed](https://blog.csdn.net/xixihahalelehehe/article/details/105140323)的编辑，awk在其对数据分析并生成报告时，显得尤为强大。简单来说awk就是把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行各种分析处理。

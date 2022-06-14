@@ -1,4 +1,5 @@
 #  Linux Command losetup 设置循环设备
+tags: 设备管理
 
 ## 1. 背景
 

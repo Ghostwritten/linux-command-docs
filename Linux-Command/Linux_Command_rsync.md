@@ -1,4 +1,5 @@
 #  Linux Command rsync 远程同步
+tags: 文件管理
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/354bb73bca7648a78d9124af56376dc1.gif#pic_center)
 

@@ -1,5 +1,5 @@
 #  Linux Command strace 调试跟踪
-
+tags: 分析,进程
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/aa98936c07a74f5383acfadd324261ad.gif#pic_center)
 

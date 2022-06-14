@@ -1,5 +1,5 @@
 #  Linux Command tr 过滤
-
+tags: 文件管理
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/c2e3e5f4654249688d25423477d0de66.gif#pic_center)
 

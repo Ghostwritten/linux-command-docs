@@ -1,5 +1,5 @@
 #  Linux Command du 查看文件大小
-
+tags: 文件管理
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/acc6ec7d923847f493f5b686b5f3cf3c.gif#pic_center)
 

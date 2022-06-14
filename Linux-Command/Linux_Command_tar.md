@@ -1,4 +1,5 @@
 # Linux Command tar 压缩
+tags: 文件管理,压缩解压
 
 ##  1. 简介
 [tar](https://www.gnu.org/software/tar/)命令可以为linux的文件和目录创建档案。利用tar，可以为某一特定文件创建档案（备份文件），也可以在档案中改变文件，或者向档案中加入新的文件。

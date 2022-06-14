@@ -1,4 +1,5 @@
 # Linux Command date 显示时间
+tags: 系统设置
 
 ## 1. 简介
 命令功能：date 可以用来显示或设定系统的日期与时间。

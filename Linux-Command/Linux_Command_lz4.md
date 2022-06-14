@@ -1,5 +1,5 @@
 #  Linux Command lz4 压缩
-
+tags: 文件管理,压缩解压
 
 ## 1. lz4
 特点：lz4压缩率略低，解压速度惊人

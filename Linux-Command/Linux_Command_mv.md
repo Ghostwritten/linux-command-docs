@@ -1,5 +1,5 @@
 #  Linux Command mv 文件移动
-
+tags: 文件管理
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/52df4bdd0dfd4faebd1922d758ab5507.gif#pic_center)
 

@@ -1,4 +1,5 @@
 #  Linux Command emacs 文本编辑器
+tags: 编辑器
 
 ## 1 基本命令
 

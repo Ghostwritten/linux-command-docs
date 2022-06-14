@@ -1,4 +1,5 @@
 #  Linux Command printf  输出
+tags: 文件管理
 
 ## 1. 简介
 

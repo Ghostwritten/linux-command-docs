@@ -1,8 +1,8 @@
 #  Linux Commnad iptables 防火墙
+tags: 网络
 
-[!NOTE|style:flat|lable:Mylable|iconVisibility:hidden]
-iptables service 在 /etc/sysconfig/iptables 中储存配置,而 firewalld将配置储存在
-/usr/lib/firewalld/ 和 /etc/firewalld/ 中的各种XML
+> [!NOTE|style:flat|lable:Mylable|iconVisibility:hidden]
+> iptables service 在 /etc/sysconfig/iptables 中储存配置,而 firewalld将配置储存在/usr/lib/firewalld/ 和 /etc/firewalld/ 中的各种XML
 
 ## 1. 默认的四张表
 

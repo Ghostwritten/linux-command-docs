@@ -1,5 +1,5 @@
 #  Linux Command find 查找匹配
-
+tags: 文件管理
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/48d0ec97e4b948238ac68617ac4ee59f.gif#pic_center)
 

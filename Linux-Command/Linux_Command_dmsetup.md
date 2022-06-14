@@ -1,5 +1,5 @@
 #  Linux Command dmsetup管理LVM
-
+tags: 设备管理
 
 ## 1. 简介
 `dmsetup` 命令是一个用来与 Device Mapper 沟通的命令行封装器（wrapper）。可使用 dmsetup 命令的 info、ls、status 和 deps 选项查看 LVM 设备的常规信息，如以下小节所述。

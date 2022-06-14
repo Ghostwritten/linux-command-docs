@@ -1,9 +1,6 @@
 #  Linux Command cut 切割
+tags: 文件管理
 
-
-@[toc]
-
----
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/3f9909aef33c4218b8400b9d931e99a4.gif#pic_center)
 ## 1. 简介
 

@@ -1,4 +1,6 @@
 #  Linux Command Alias 别名
+tags: 系统设置
+
 alias命令别名用法：
 ```bash
 # save fingers!

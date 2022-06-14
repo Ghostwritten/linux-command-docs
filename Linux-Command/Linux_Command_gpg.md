@@ -1,5 +1,5 @@
 #  Linux Command gpg 加密
-
+tags: 文件管理
 
 ```bash
 $ cat test

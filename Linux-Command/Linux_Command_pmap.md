@@ -1,5 +1,5 @@
 #  Linux Command pmap 测试进程内存映射工具
-
+tags: 监控
 
 ## 1. 简介
 pmap命令用于报告进程的内存映射关系，是Linux调试及运维一个很好的工具。

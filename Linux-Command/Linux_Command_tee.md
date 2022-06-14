@@ -1,9 +1,5 @@
 #  Linux Command tee 
-@[toc]
-
----
-
-
+tags: 文件管理
 
 ## 1. 简介
 Linux tee命令用于读取标准输入的数据，并将其内容输出成文件。

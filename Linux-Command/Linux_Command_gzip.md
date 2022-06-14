@@ -1,5 +1,5 @@
 #  Linux Command gzip 压缩
-
+tags: 文件管理,压缩解压
 
 ## 1. 说明
 [gunzi](https://www.gnu.org/software/gzip/)p命令作用不能是目录,只能压缩单个文件。

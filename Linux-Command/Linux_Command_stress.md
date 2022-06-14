@@ -1,4 +1,5 @@
 #  Linux Command stress 进程压力测试工具
+tags: 测试,进程
 
 ## 1. 简介
 为了测试服务器的负载情况，可以使用stress这个压力测试工具
