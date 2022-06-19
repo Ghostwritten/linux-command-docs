@@ -12,8 +12,10 @@
          "weibo": null
      },
      "sidebar": {
-        "Gitbook Docs": "https://smoothies.com.cn/gitbook-docs/",
-        "zongxun's Blog": "https://smoothies.com.cn"
+        "Shell": "https://smoothies.com.cn/shell-docs/",
+        "Gitbook": "https://smoothies.com.cn/gitbook-docs/",
+        "Kubernetes Exam": "https://ghostwritten.gitbook.io/kubernetes-exam-in-action/",
+        "Blog": "https://smoothies.com.cn"
      }
   },
   "plugins": [
@@ -33,6 +35,7 @@
     "insert-logo",
     "musicxml",
     "prism",
+    "prism-themes",
     "pageview-count",
     "-highlight",
     "-search",
@@ -95,6 +98,9 @@
     },
 
     "prism": {
+      "css": [
+        "prism-themes/themes/prism-holi-theme.css"
+      ],
       "lang": {
         "shell": "bash"
       }
