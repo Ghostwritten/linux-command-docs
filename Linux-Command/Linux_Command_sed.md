@@ -270,6 +270,33 @@ bbbb
 cccc
 0000
 ```
+
+
+```bash
+$ cat test 
+aaa
+bbb
+ccc
+```
+有某aaa字符串行的下一行加
+
+```bash
+$ sed '/aaa/a111' test 
+aaa
+111
+bbb
+ccc
+```
+有某aaa字符串行的上一行加
+
+```bash
+$ sed '/aaa/i111' test 
+111
+aaa
+bbb
+ccc
+```
+
 ### 4.10 多匹配模式
 
 ```bash

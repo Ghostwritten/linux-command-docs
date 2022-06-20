@@ -12,10 +12,10 @@
          "weibo": null
      },
      "sidebar": {
-        "Shell": "https://smoothies.com.cn/shell-docs/",
+        "Blog": "https://smoothies.com.cn",
+        "Exam": "https://ghostwritten.gitbook.io/kubernetes-exam-in-action/",
         "Gitbook": "https://smoothies.com.cn/gitbook-docs/",
-        "Kubernetes Exam": "https://ghostwritten.gitbook.io/kubernetes-exam-in-action/",
-        "Blog": "https://smoothies.com.cn"
+        "Shell": "https://smoothies.com.cn/shell-docs/"
      }
   },
   "plugins": [
