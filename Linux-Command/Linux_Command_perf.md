@@ -275,19 +275,19 @@ ls命令执行了多少次系统调用：
 
 记录nginx进程的性能数据：
 
-```csharp
+```bash
 $ perf record -p `pgrep -d ',' nginx`
 ```
 
 记录执行ls时的性能数据：
 
-```csharp
+```bash
 $ perf record ls -g
 ```
 
 记录执行ls时的系统调用，可以知道哪些系统调用最频繁：
 
-```csharp
+```bash
 $ perf record -e syscalls:sys_enter ls
 ```
 
@@ -298,7 +298,7 @@ $ perf record -e syscalls:sys_enter ls
 
 #### 2.5.1 参数
 
-```csharp
+```bash
 -i：Input file name. (default: perf.data)
 ```
 
@@ -306,7 +306,7 @@ $ perf record -e syscalls:sys_enter ls
 
 #### 2.5.2 实例 
 
-```csharp
+```bash
 $ perf report -i perf.data.2
 ```
 
@@ -324,7 +324,7 @@ More
 
 Analyze lock events.
 
-```csharp
+```bash
 perf lock {record | report | script | info}
 ```
 

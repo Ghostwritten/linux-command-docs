@@ -29,19 +29,19 @@ losetup [-d][-e <加密方式>][-o <平移数目>][循环设备代号][文件]
 ### 5.1 示例1
 （1）创建空的磁盘镜像文件，这里创建一个1.44M的软盘
 
-```c
+```bash
 $ dd if=/dev/zero of=floppy.img bs=512 count=2880
 ```
 
 （2）使用 losetup将磁盘镜像文件虚拟成块设备
 
-```c
+```bash
 $ losetup /dev/loop1 floppy.img
 ```
 
 （3）挂载块设备
 
-```c
+```bash
 $ mount /dev/loop0 /tmp
 ```
 
@@ -49,14 +49,14 @@ $ mount /dev/loop0 /tmp
 
 （4） 卸载loop设备
 
-```c
+```bash
 $ umount /tmp
 $ losetup -d /dev/loop1
 ```
 ###  5.2 示例2
 1. 首先创建一个 1G 大小的空文件：
 
-```c
+```bash
 # dd if=/dev/zero of=loopfile.img bs=1G count=1
 1+0 records in
 1+0 records out
@@ -65,21 +65,21 @@ $ losetup -d /dev/loop1
 
 2. 对该文件格式化为 ext4 格式：
 
-```c
+```bash
 # mkfs.ext4 loopfile.img
 。。。。
 ```
 
 3. 用 file 命令查看下格式化后的文件类型：
 
-```c
+```bash
 # file loopfile.img
 loopfile.img: Linux rev 1.0 ext4 filesystem data, UUID=a9dfb4a0-6653-4407-ae05-7044d92c1159 (extents) (large files) (huge files)
 ```
 
 4. 准备将上面的文件挂载起来：
 
-```c
+```bash
 # mkdir /mnt/loopback
 # mount -o loop loopfile.img /mnt/loopback
 ```
@@ -88,7 +88,7 @@ mount 命令的 `-o loop` 选项可以将任意一个 loopback 文件系统挂�
 
 上面的 mount 命令实际等价于下面两条命令：
 
-```c
+```bash
 # losetup /dev/loop0 loopfile.img
 # mount /dev/loop0 /mnt/loopback
 ```
@@ -97,14 +97,14 @@ mount 命令的 `-o loop` 选项可以将任意一个 loopback 文件系统挂�
 
 然而对于第一种方法(mount -o loop)并不能适用于所有的场景。比如，我们想创建一个硬盘文件，然后对该文件进行分区，接着挂载其中一个子分区，这时就不能用 -o loop 这种方法了。因此必须如下做：
 
-```c
+```bash
 # losetup /dev/loop1 loopfile.img
 # fdisk /dev/loop1
 ```
 
 6. 卸载挂载点：
 
-```c
+```bash
 # umount /mnt/loopback
 ```
 

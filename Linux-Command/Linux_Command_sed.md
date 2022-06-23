@@ -46,7 +46,7 @@ y	 将字符替换为另一字符（不能对正则表达式使用y命令）
 ##  4. 举例
 ### 4.1  p：打印行
 
-```c
+```bash
 $ sed '1p' /etc/rc.local 
 #!/bin/bash
 # THIS FILE IS ADDED FOR COMPATIBILITY PURPOSES
@@ -79,7 +79,7 @@ $ sed -n '$=' /etc/rc.local $显示函数
 ```
 ### 4.2 d：删除行
 
-```c
+```bash
 $ cat  /etc/rc.local 
 #!/bin/bash
 # THIS FILE IS ADDED FOR COMPATIBILITY PURPOSES
@@ -107,7 +107,7 @@ sed '/^$/d' /etc/rc.local                   $删除空行
 ```
 
 ### 4.3 s：字符串替换 
-```c
+```bash
 sed 's/ll/TARENA/' /etc/rc.local          $替换所有行的第一“||”
 sed 's/ll/TARENA/g'  /etc/rc.local        $替换所有行所有的“||”
 sed '3s/script/SCRIPT/2' /etc/rc.local    $替换第三那行的第二个“script”
@@ -128,7 +128,7 @@ i love you
 name id year1
 ```
 ### 4.4 -r：sed支持扩展正则
-```c
+```bash
 sed -r 's/^(.)(.)(.*)/\2\1\3/' /etc/rc.local  $每行文本拆分为“第1个字符”“第2个字符”“剩下的所有字符”三个部分，然后通过替换操作重排顺序为“2-1-3
 sed -r 's/^(.)(.*)(.)$/\3\2\1/' /etc/rc.local   $第一个字符和最后一个字符对调
 sed -r 's/[0-9]//g;s/^( )+//' /etc/rc.local   $删除所有数字、行首空格
@@ -165,7 +165,7 @@ May:45K:111
 
 ###  4.6 r：从文件中读取输入行
 
-```c
+```bash
 $ cat a.txt 
 192.168.1.110 www.baidu.com
 
@@ -181,7 +181,7 @@ $ sed '/oss/r a.txt' /etc/hosts
 192.168.1.110 www.baidu.com
 ```
 ### 4.7  w：另存为某文件
-```c
+```bash
 $ cat a.txt 
 192.168.1.110 www.baidu.com
 $ sed -i 'w c.txt' a.txt 
@@ -197,7 +197,7 @@ H：复制（模式空间追加复制
 h：复制（模式空间覆盖
 G：粘贴（保持空间追加模式空间
 g：粘贴（保持空间覆盖模式空间
-```c
+```bash
 [root@monitor1 ~]# sed '1h;1g'  mm
 aaaa
 bbbb
@@ -246,7 +246,7 @@ sed '$i 添加的内容' file $这是在最后一行行前添加字符串
 sed '$a添加的内容' file $这是在最后一行行后添加字符串
 ```
 
-```c
+```bash
 $ cat mm
 aaaa
 bbbb

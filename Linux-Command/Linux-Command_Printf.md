@@ -31,7 +31,7 @@ Hello, Shell
 
 ###  4.2 格式输出
 
-```powershell
+```bash
 #!/bin/bash
 printf "%-10s %-8s %-4s\n" 姓名 性别 体重kg  
 printf "%-10s %-8s %-4.2f\n" 郭靖 男 66.1234 
@@ -52,7 +52,7 @@ printf "%-10s %-8s %-4.2f\n" 郭芙 女 47.9876
 `%-4.2f` 指格式化为小数，其中.2指保留2位小数。
 
 
-```powershell
+```bash
 #!/bin/bash
 # format-string为双引号
 printf "%d %s\n" 1 "abc"
@@ -99,7 +99,7 @@ j
  - \ddd	表示1到3位数八进制值的字符。仅在格式字符串中有效
  - \0ddd	表示1到3位的八进制值字符
 
-```powershell
+```bash
 $ printf "a string, no processing:<%s>\n" "A\nB"
 a string, no processing:<A\nB>
 

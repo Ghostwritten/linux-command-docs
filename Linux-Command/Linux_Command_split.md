@@ -8,7 +8,7 @@ split命令可以将一个大文件分割成很多个小文件，有时需要将
 
 ## 2. 参数
 
-```c
+```bash
 -a, --suffix-length=N   use suffixes of length N (default 2)   #输出文件后缀长度，默认为：2
 -b, --bytes=SIZE   put SIZE bytes per output file       #按照文件大小分割文件，单位：字节
 一个字节 = 8位二进制数（1byte == 8bit）

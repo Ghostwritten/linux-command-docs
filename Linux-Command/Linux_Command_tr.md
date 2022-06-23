@@ -92,7 +92,7 @@ this is a text line.
 
 巧妙使用tr做数字相加操作：
 
-```c
+```bash
 echo 1 2 3 4 5 6 7 8 9 | xargs -n1 | echo $[ $(tr '\n' '+') 0 ]
 ```
 

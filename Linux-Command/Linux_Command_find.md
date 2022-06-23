@@ -79,7 +79,7 @@ rm { } ;
 ```
 查找/var/logs目录中更改时间在7日以前的普通文件，并在删除之前询问它们；
 
-```c
+```bash
 $ find /var/logs -type f -mtime +7 -ok rm { } ;
 ```
 

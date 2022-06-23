@@ -67,7 +67,7 @@ devmap_name major:minor
 
 ### 3.2 dmsetup info
 
-```c
+```bash
 # dmsetup info
 Name:              testgfsvg-testgfslv1
 State:             ACTIVE
@@ -114,7 +114,7 @@ UUID
 ### 3.3 dmsetup ls 
 可以使用 `dmsetup ls` 命令列出映射的设备的设备名称列表。可以使用 `dmsetup ls --target target_type` 命令列出至少有一个指定类型目标的设备。有关 dmsetup ls 的其他选项
 
-```c
+```bash
 # dmsetup ls
 testgfsvg-testgfslv3    (253:4)
 testgfsvg-testgfslv2    (253:3)
@@ -123,7 +123,7 @@ VolGroup00-LogVol01     (253:1)
 VolGroup00-LogVol00     (253:0)
 ```
 
-```c
+```bash
 # dmsetup ls --target mirror
 lock_stress-grant--02.1722      (253, 34)
 lock_stress-grant--01.1720      (253, 18)
@@ -172,7 +172,7 @@ VolGroup00-LogVol00: 0 151912448 linear
 ### 3.5 dmsetup deps 
 `dmsetup deps device` 命令为指定设备的映射列表参考的设备提供（major，minor）对列表。如果没有指定设备名称，则输出所有目前配置的设备映射器设备信息。
 
-```c
+```bash
 # dmsetup deps
 testgfsvg-testgfslv3: 1 dependencies    : (8, 16)
 testgfsvg-testgfslv2: 1 dependencies    : (8, 16)
@@ -181,7 +181,7 @@ VolGroup00-LogVol01: 1 dependencies     : (8, 2)
 VolGroup00-LogVol00: 1 dependencies     : (8, 2)
 ```
 
-```c
+```bash
 # dmsetup deps lock_stress-grant--02.1722
 3 dependencies  : (253, 33) (253, 32) (253, 31)
 ```

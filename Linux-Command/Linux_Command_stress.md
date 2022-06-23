@@ -36,12 +36,12 @@ stress <options>
 ### 4.1 消耗 CPU 资源
 stress 消耗 CPU 资源的方式是通过调用 sqrt 函数计算由 rand 函数产生的随机数的平方根实现的。下面的命令会产生 4 个这样的进程不断的进行计算：
 
-```c
+```bash
 $ stress -c 4
 stress: info: [8279] dispatching hogs: 4 cpu, 0 io, 0 vm, 0 hdd
 ```
 
-```c
+```bash
 $ top
 top - 12:09:06 up 12 min,  3 users,  load average: 3.11, 0.96, 0.38
 Tasks: 141 total,   6 running, 135 sleeping,   0 stopped,   0 zombie
@@ -57,7 +57,7 @@ KiB Swap:  2097148 total,  2097148 free,        0 used.  1660988 avail Mem
 ### 4.2 消耗内存资源
 产生两个子进程，每个进程分配 300M 内存
 
-```cpp
+```bashpp
 $ stress --vm 2 --vm-bytes 300M --vm-keep
 stress: info: [8344] dispatching hogs: 0 cpu, 0 io, 2 vm, 0 hdd
 

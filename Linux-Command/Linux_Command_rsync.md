@@ -147,7 +147,7 @@ compare1.sh  compare2.sh
 ### 4.6. 无密码同步
 服务端配置（192.168.211.15）
 
-```powershell
+```bash
 $ vim /etc/rsyncd.conf
 #global settings 
 pid file = /var/run/rsyncd.pid
@@ -169,13 +169,13 @@ ignore errors = yes
 timeout = 120
 ```
 刷新服务
-```powershell
+```bash
 $ /usr/bin/rsync --daemon
 ```
 
 客户端
 
-```powershell
+```bash
 $ rsync --progress -azv root@192.168.211.15::shell /data/shell #不拷贝源目录，在目的添加目录
 $ rsync  --delete  --progress -azv root@192.168.211.15::shell /data/shell  #在目标中删除源中没有的文件
 $ rsync --bwlimit=50 --progress -azv root@192.168.211.15::shell /data/shell  #限制流量同步
@@ -183,7 +183,7 @@ $ rsync --bwlimit=50 --progress -azv root@192.168.211.15::shell /data/shell  #�
 ### 4.7. 有密码同步
 服务端  
 
-```powershell
+```bash
 $ vim /etc/rsyncd.conf
 #This is the rsync daemon configuration 
 
@@ -209,11 +209,11 @@ auth users = cloudmon
 secrets file = /etc/rsyncd.passwd
 ```
 刷新服务
-```powershell
+```bash
 $ /usr/bin/rsync --daemon
 ```
 配置用户密码
-```powershell
+```bash
 $ echo "cloudmon:redhat123" > /etc/rsyncd.passwd 
 $ chmod 600 /etc/rsyncd.passwd
 $ mkdir -p /root/monitor_data
@@ -221,7 +221,7 @@ $ cp /root/prometheus /root/monitor_data  #传输的介质
 ```
 客户端
 
-```powershell
+```bash
 $ useradd cloudmon
 $ echo "redhat123" > /home/cloudmon/rsyncd.passwd 
 $ chmod 600 /home/cloudmon/rsyncd.passwd 
@@ -232,14 +232,14 @@ $ rsync -avz --progress  --password-file=/home/cloudmon/rsyncd.passwd  root@192.
 
 或者是
 
-```powershell
+```bash
 $ export RSYNC_PASSWORD="redhat123"
 $ rsync -avz --progress  --password-file=/home/cloudmon/rsyncd.passwd  root@192.168.211.15::monitor_data /data
 ```
 ### 4.8. 写入同步
 服务端
 
-```powershell
+```bash
 $ vim /etc/rsyncd.conf
 #global settings 
 pid file = /var/run/rsyncd.pid
@@ -262,13 +262,13 @@ auth users = cloudmon
 secrets file = /etc/rsyncd.passwd
 ```
 
-```powershell
+```bash
 $ mkdir -p /root/write_data
 $ touch /root/write_data/hello.txt #在目标(服务端)中删除源中没有的文件
 ```
 客户端
 
-```powershell
+```bash
 $ echo "123" > /root/write_file
 $ export RSYNC_PASSWORD="redhat123"
 $ rsync -avz --progress --delete /root/write_file cloudmon@192.168.211.15::write_data 

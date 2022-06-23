@@ -73,7 +73,7 @@ $ dd if=/dev/hda of=/root/image count=1 bs=512
 
 恢复：
 
-```c
+```bash
 #dd if=/root/image of=/dev/had
 ```
 

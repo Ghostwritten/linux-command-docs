@@ -177,7 +177,7 @@ OR
 ```
 要仅输入应用程序名称而不输入其完整路径名，请确保/snap/bin/或`/var/lib/snapd/snap/bin/`在您的`PATH`环境变量中（默认情况下应添加）。
 
-```c
+```bash
 # echo $PATH
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/441d5b3b886440b695548d4d88cebb6d.png)

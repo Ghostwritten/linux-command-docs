@@ -6,6 +6,7 @@
 
 - [jaywcjlove 的命令搜索](https://github.com/jaywcjlove/linux-command)
 - [linux 命令菜鸟教程](https://www.runoob.com/linux/linux-command-manual.html)
+- [linuxhint.com](https://linuxhint.com/category/linux-commands/)
 
 ## 联系
 

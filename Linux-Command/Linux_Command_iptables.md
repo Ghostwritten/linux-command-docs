@@ -246,7 +246,7 @@ $ iptables  -I  INPUT  -s  192.168.195.0/24  -p  tcp  --tcp-flags  SYN,ACK,RST,F
 $ iptables  -A  FORWARD  -s  192.168.194.0/24  -j  ACCEPT
 ```
 
-```c
+```bash
 $ iptables  -A  FORWARD  -d  192.168.194.0/24  -j  REJECT
 ```
 

@@ -6,7 +6,7 @@ tags: 文件管理,压缩解压
 
 ## 2. 安装
 
-```c
+```bash
 准备编译 Gzip：
 
 ./configure --prefix=/usr --bindir=/bin
@@ -28,7 +28,7 @@ mv -v /bin/{zfgrep,zforce,zgrep,zless,zmore,znew} /usr/bin
 
 ## 3. 格式
 
-```c
+```bash
 gunzip [-acfhlLnNqrtvV][-s ][文件...]
 ```
 
@@ -36,7 +36,7 @@ gunzip [-acfhlLnNqrtvV][-s ][文件...]
 
 ## 4. 参数
 
-```c
+```bash
 -a或--ascii：使用ASCII文字模式。
 -c或--stdout或--to-stdout：把解压后的文件输出到标准输出设备。
 -d或--decompress或----uncompress 　解开压缩文件

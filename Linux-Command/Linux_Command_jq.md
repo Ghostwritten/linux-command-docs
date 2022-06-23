@@ -9,7 +9,7 @@ tags: 文件管理
 ## 2. 参数
 常用选项
 
-```python
+```bash
 -c 紧凑输出json数据
 -e 根据输出结果设置命令退出状态码
 -s 读取所有输入到一个数组
@@ -112,7 +112,7 @@ $ echo '{"safd":"fsafd"}' | jq  --tab .
 ```
 获取上面地理json数据里的name值
 
-```go
+```bash
 $ jq '.[]|{name}' test.json 
 {
   "name": "广州市"
@@ -123,7 +123,7 @@ $ jq '.[]|{name}' test.json
 ```
 获取第一个name值
 
-```go
+```bash
 $ jq '.[0]|{name}' test.json 
 {
   "name": "广州市"
@@ -131,7 +131,7 @@ $ jq '.[0]|{name}' test.json
 ```
 只打印出第一个map的值：
 
-```go
+```bash
 $ jq '.[0]|.[]' test.json 
 113.30765
 "广州市"
@@ -140,14 +140,14 @@ $ jq '.[0]|.[]' test.json
 ```
 打印出一个map的name值
 
-```go
+```bash
 $ jq '.[0]|.name' test.json 
 "广州市"
 ```
 
 打印出一个map的name值并已普通字符串显示
 
-```go
+```bash
 $ jq -r '.[0]|.name' test.json 
 广州市
 ```

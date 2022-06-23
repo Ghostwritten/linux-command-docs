@@ -29,7 +29,7 @@ ebook-convert file.epub file.azw3
 ```
 ###   3.2 .epub 转换 .mobi 
 
-```c
+```bash
 ebook-convert file.epub file.mobi
 ```
 要更改电子书内容的对齐方式，请使用以下格式的命令：
