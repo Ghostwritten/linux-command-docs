@@ -1,5 +1,5 @@
 #  Linux Command sshpass 远程主机
-tags： 远程
+tags: 远程
 
 1、直接远程连接某主机
 
