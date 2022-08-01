@@ -91,5 +91,4 @@
   * [Linux Command Zip](Linux-Command/Linux_Command_zip.md)
   * [Linux Commmand Awk](Linux-Command/Linux_Commmand_awk.md)
   * [Linux Command Printf](Linux-Command/Linux-Command_Printf.md)
-* [About](About.md)
 * [Tags](tags.md)

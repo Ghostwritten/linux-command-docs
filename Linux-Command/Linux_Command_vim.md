@@ -453,7 +453,20 @@ mu = number
 
     ~/.vimrc    针对当前用户
 ```
-
+### 实例1
+```bash
+vi ~/.vimrc
+---
+:set number
+:set et
+:set sw=2 ts=2 sts=2
+---
+^: Start of word in line
+0: Start of line
+$: End of line
+w: End of word
+GG: End of file
+```
 
 ## 5 多行处理
 ### 5.1 多行添加
