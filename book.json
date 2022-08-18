@@ -23,6 +23,7 @@
         "Python": "https://smoothies.com.cn/python-docs/Overview.html",
         "Go": "https://smoothies.com.cn/go-docs/Overview.html",
         "Exam": "https://ghostwritten.gitbook.io/kubernetes-exam-in-action/"
+     }
   },
 
   "plugins": [
