@@ -1,0 +1,1797 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linux Command Ssh Keyscan · Linux Command Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="宗勋 - zongxun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-holi-theme.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Linux_Command_sshpass.html" />
+    
+    
+    <link rel="prev" href="Linux_Command_ss.html" />
+    
+
+    <link href="http://smoothies.com.cn/rss" title="Linux Command Docs" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Ghostwritten","repo":"linux-command-docs","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/docker-docs/Overview.html" target="_blank" class="custom-link">Docker</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn" target="_blank" class="custom-link">Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/kubernetes-docs/Overview.html" target="_blank" class="custom-link">Kubernetes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/go-docs/Overview.html" target="_blank" class="custom-link">Go</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/prometheus-docs/Overview.html" target="_blank" class="custom-link">Prometheus</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-command-docs/Overview.html" target="_blank" class="custom-link">Command</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/shell-docs/Overview.html" target="_blank" class="custom-link">Shell</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-docs/Overview.html" target="_blank" class="custom-link">Linux</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/gitbook-docs/Overview.html" target="_blank" class="custom-link">Gitbook</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/python-docs/Overview.html" target="_blank" class="custom-link">Python</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://ghostwritten.gitbook.io/kubernetes-exam-in-action/" target="_blank" class="custom-link">Exam</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux Command
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Linux_Command_ab.html">
+            
+                <a href="Linux_Command_ab.html">
+            
+                    
+                    Linux Command Ab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Linux_Command_Alias.html">
+            
+                <a href="Linux_Command_Alias.html">
+            
+                    
+                    Linux Command Alias
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Linux_Command_apt.html">
+            
+                <a href="Linux_Command_apt.html">
+            
+                    
+                    Linux Command Apt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="Linux_Command_arp.html">
+            
+                <a href="Linux_Command_arp.html">
+            
+                    
+                    Linux Command Arp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="Linux_Command_awk.html">
+            
+                <a href="Linux_Command_awk.html">
+            
+                    
+                    Linux Command Awk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="Linux_Command_bcc.html">
+            
+                <a href="Linux_Command_bcc.html">
+            
+                    
+                    Linux Command Bcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="Linux_Command_chcon.html">
+            
+                <a href="Linux_Command_chcon.html">
+            
+                    
+                    Linux Command Chcon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="Linux_Command_cmp.html">
+            
+                <a href="Linux_Command_cmp.html">
+            
+                    
+                    Linux Command Cmp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="Linux_Command_curl.html">
+            
+                <a href="Linux_Command_curl.html">
+            
+                    
+                    Linux Command Curl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="Linux_Command_cut.html">
+            
+                <a href="Linux_Command_cut.html">
+            
+                    
+                    Linux Command Cut
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="Linux_Command_Date.html">
+            
+                <a href="Linux_Command_Date.html">
+            
+                    
+                    Linux Command Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="Linux_Command_dd.html">
+            
+                <a href="Linux_Command_dd.html">
+            
+                    
+                    Linux Command Dd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="Linux_Command_diff.html">
+            
+                <a href="Linux_Command_diff.html">
+            
+                    
+                    Linux Command Diff
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="Linux_Command_dig.html">
+            
+                <a href="Linux_Command_dig.html">
+            
+                    
+                    Linux Command Dig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="Linux_Command_dmsetup.html">
+            
+                <a href="Linux_Command_dmsetup.html">
+            
+                    
+                    Linux Command Dmsetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="Linux_Command_dnf.html">
+            
+                <a href="Linux_Command_dnf.html">
+            
+                    
+                    Linux Command Dnf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="Linux_Command_dpkg.html">
+            
+                <a href="Linux_Command_dpkg.html">
+            
+                    
+                    Linux Command Dpkg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="Linux_Command_dstat.html">
+            
+                <a href="Linux_Command_dstat.html">
+            
+                    
+                    Linux Command Dstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="Linux_Command_du.html">
+            
+                <a href="Linux_Command_du.html">
+            
+                    
+                    Linux Command Du
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="Linux_Command_e2fsck.html">
+            
+                <a href="Linux_Command_e2fsck.html">
+            
+                    
+                    Linux Command E 2 Fsck
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="Linux_Command_ebook-convert.html">
+            
+                <a href="Linux_Command_ebook-convert.html">
+            
+                    
+                    Linux Command Ebook Convert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="Linux_Command_echo.html">
+            
+                <a href="Linux_Command_echo.html">
+            
+                    
+                    Linux Command Echo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="Linux_Command_egrep.html">
+            
+                <a href="Linux_Command_egrep.html">
+            
+                    
+                    Linux Command Egrep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="Linux_Command_emacs.html">
+            
+                <a href="Linux_Command_emacs.html">
+            
+                    
+                    Linux Command Emacs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="Linux_Command_fdisk.html">
+            
+                <a href="Linux_Command_fdisk.html">
+            
+                    
+                    Linux Command Fdisk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="Linux_Command_find.html">
+            
+                <a href="Linux_Command_find.html">
+            
+                    
+                    Linux Command Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="Linux_Command_fio.html">
+            
+                <a href="Linux_Command_fio.html">
+            
+                    
+                    Linux Command Fio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="Linux_Command_gpg.html">
+            
+                <a href="Linux_Command_gpg.html">
+            
+                    
+                    Linux Command Gpg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="Linux_Command_grep.html">
+            
+                <a href="Linux_Command_grep.html">
+            
+                    
+                    Linux Command Grep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.30" data-path="Linux_Command_group.html">
+            
+                <a href="Linux_Command_group.html">
+            
+                    
+                    Linux Command Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.31" data-path="Linux_Command_gzip.html">
+            
+                <a href="Linux_Command_gzip.html">
+            
+                    
+                    Linux Command Gzip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.32" data-path="Linux_Command_hping3.html">
+            
+                <a href="Linux_Command_hping3.html">
+            
+                    
+                    Linux Command Hping 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.33" data-path="Linux_Command_iostat.html">
+            
+                <a href="Linux_Command_iostat.html">
+            
+                    
+                    Linux Command Iostat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.34" data-path="Linux_Command_ip.html">
+            
+                <a href="Linux_Command_ip.html">
+            
+                    
+                    Linux Command Ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.35" data-path="Linux_Command_iperf3.html">
+            
+                <a href="Linux_Command_iperf3.html">
+            
+                    
+                    Linux Command Iperf 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.36" data-path="Linux_Command_ipmitool.html">
+            
+                <a href="Linux_Command_ipmitool.html">
+            
+                    
+                    Linux Command Ipmitool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.37" data-path="Linux_Command_iptables.html">
+            
+                <a href="Linux_Command_iptables.html">
+            
+                    
+                    Linux Command Iptables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.38" data-path="Linux_Command_jq.html">
+            
+                <a href="Linux_Command_jq.html">
+            
+                    
+                    Linux Command Jq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.39" data-path="Linux_Command_losetup.html">
+            
+                <a href="Linux_Command_losetup.html">
+            
+                    
+                    Linux Command Losetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.40" data-path="Linux_Command_lvextend.html">
+            
+                <a href="Linux_Command_lvextend.html">
+            
+                    
+                    Linux Command Lvextend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.41" data-path="Linux_Command_lz4.html">
+            
+                <a href="Linux_Command_lz4.html">
+            
+                    
+                    Linux Command Lz 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.42" data-path="Linux_Command_mount.html">
+            
+                <a href="Linux_Command_mount.html">
+            
+                    
+                    Linux Command Mount
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.43" data-path="Linux_Command_mpstat.html">
+            
+                <a href="Linux_Command_mpstat.html">
+            
+                    
+                    Linux Command Mpstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.44" data-path="Linux_Command_mv.html">
+            
+                <a href="Linux_Command_mv.html">
+            
+                    
+                    Linux Command Mv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.45" data-path="Linux_Command_namp.html">
+            
+                <a href="Linux_Command_namp.html">
+            
+                    
+                    Linux Command Namp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.46" data-path="Linux_Command_nano.html">
+            
+                <a href="Linux_Command_nano.html">
+            
+                    
+                    Linux Command Nano
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.47" data-path="Linux_Command_ncat.html">
+            
+                <a href="Linux_Command_ncat.html">
+            
+                    
+                    Linux Command Ncat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.48" data-path="Linux_Command_Nethogs.html">
+            
+                <a href="Linux_Command_Nethogs.html">
+            
+                    
+                    Linux Command Nethogs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.49" data-path="Linux_Command_netstat.html">
+            
+                <a href="Linux_Command_netstat.html">
+            
+                    
+                    Linux Command Netstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.50" data-path="Linux_Command_nsenter.html">
+            
+                <a href="Linux_Command_nsenter.html">
+            
+                    
+                    Linux Command Nsenter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.51" data-path="Linux_Command_passwd.html">
+            
+                <a href="Linux_Command_passwd.html">
+            
+                    
+                    Linux Command Passwd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.52" data-path="Linux_Command_perf.html">
+            
+                <a href="Linux_Command_perf.html">
+            
+                    
+                    Linux Command Perf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.53" data-path="Linux_Command_pidstat.html">
+            
+                <a href="Linux_Command_pidstat.html">
+            
+                    
+                    Linux Command Pidstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.54" data-path="Linux_Command_ping.html">
+            
+                <a href="Linux_Command_ping.html">
+            
+                    
+                    Linux Command Ping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.55" data-path="Linux_Command_pmap.html">
+            
+                <a href="Linux_Command_pmap.html">
+            
+                    
+                    Linux Command Pmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.56" data-path="Linux_Command_popd.html">
+            
+                <a href="Linux_Command_popd.html">
+            
+                    
+                    Linux Command Popd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.57" data-path="Linux_Command_ps.html">
+            
+                <a href="Linux_Command_ps.html">
+            
+                    
+                    Linux Command Ps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.58" data-path="Linux_Command_pstree.html">
+            
+                <a href="Linux_Command_pstree.html">
+            
+                    
+                    Linux Command Pstree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.59" data-path="Linux_Command_pushd.html">
+            
+                <a href="Linux_Command_pushd.html">
+            
+                    
+                    Linux Command Pushd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.60" data-path="Linux_Command_read.html">
+            
+                <a href="Linux_Command_read.html">
+            
+                    
+                    Linux Command Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.61" data-path="Linux_Command_route.html">
+            
+                <a href="Linux_Command_route.html">
+            
+                    
+                    Linux Command Route
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.62" data-path="Linux_Command_rpm.html">
+            
+                <a href="Linux_Command_rpm.html">
+            
+                    
+                    Linux Command Rpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.63" data-path="Linux_Command_rsync.html">
+            
+                <a href="Linux_Command_rsync.html">
+            
+                    
+                    Linux Command Rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.64" data-path="Linux_Command_sar.html">
+            
+                <a href="Linux_Command_sar.html">
+            
+                    
+                    Linux Command Sar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.65" data-path="Linux_Command_screen.html">
+            
+                <a href="Linux_Command_screen.html">
+            
+                    
+                    Linux Command Screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.66" data-path="Linux_Command_sed.html">
+            
+                <a href="Linux_Command_sed.html">
+            
+                    
+                    Linux Command Sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.67" data-path="Linux_Command_snap.html">
+            
+                <a href="Linux_Command_snap.html">
+            
+                    
+                    Linux Command Snap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.68" data-path="Linux_Command_sort.html">
+            
+                <a href="Linux_Command_sort.html">
+            
+                    
+                    Linux Command Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.69" data-path="Linux_Command_split.html">
+            
+                <a href="Linux_Command_split.html">
+            
+                    
+                    Linux Command Split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.70" data-path="Linux_Command_ss.html">
+            
+                <a href="Linux_Command_ss.html">
+            
+                    
+                    Linux Command Ss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.71" data-path="Linux_Command_ssh-keyscan.html">
+            
+                <a href="Linux_Command_ssh-keyscan.html">
+            
+                    
+                    Linux Command Ssh Keyscan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.72" data-path="Linux_Command_sshpass.html">
+            
+                <a href="Linux_Command_sshpass.html">
+            
+                    
+                    Linux Command Sshpass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.73" data-path="Linux_Command_strace.html">
+            
+                <a href="Linux_Command_strace.html">
+            
+                    
+                    Linux Command Strace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.74" data-path="Linux_Command_stress.html">
+            
+                <a href="Linux_Command_stress.html">
+            
+                    
+                    Linux Command Stress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.75" data-path="Linux_Command_sysbench.html">
+            
+                <a href="Linux_Command_sysbench.html">
+            
+                    
+                    Linux Command Sysbench
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.76" data-path="Linux_Command_tar.html">
+            
+                <a href="Linux_Command_tar.html">
+            
+                    
+                    Linux Command Tar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.77" data-path="Linux_Command_tc.html">
+            
+                <a href="Linux_Command_tc.html">
+            
+                    
+                    Linux Command Tc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.78" data-path="Linux_Command_tcpdump.html">
+            
+                <a href="Linux_Command_tcpdump.html">
+            
+                    
+                    Linux Command Tcpdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.79" data-path="Linux_Command_tee.html">
+            
+                <a href="Linux_Command_tee.html">
+            
+                    
+                    Linux Command Tee
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.80" data-path="Linux_Command_telnet.html">
+            
+                <a href="Linux_Command_telnet.html">
+            
+                    
+                    Linux Command Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.81" data-path="Linux_Command_test.html">
+            
+                <a href="Linux_Command_test.html">
+            
+                    
+                    Linux Command Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.82" data-path="Linux_Command_touch.html">
+            
+                <a href="Linux_Command_touch.html">
+            
+                    
+                    Linux Command Touch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.83" data-path="Linux_Command_tput.html">
+            
+                <a href="Linux_Command_tput.html">
+            
+                    
+                    Linux Command Tput
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.84" data-path="Linux_Command_tr.html">
+            
+                <a href="Linux_Command_tr.html">
+            
+                    
+                    Linux Command Tr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.85" data-path="Linux_Command_traceroute.html">
+            
+                <a href="Linux_Command_traceroute.html">
+            
+                    
+                    Linux Command Traceroute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.86" data-path="Linux_Command_trap.html">
+            
+                <a href="Linux_Command_trap.html">
+            
+                    
+                    Linux Command Trap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.87" data-path="Linux_Command_tree.html">
+            
+                <a href="Linux_Command_tree.html">
+            
+                    
+                    Linux Command Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.88" data-path="Linux_Command_uniq.html">
+            
+                <a href="Linux_Command_uniq.html">
+            
+                    
+                    Linux Command Uniq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.89" data-path="Linux_Command_uptime.html">
+            
+                <a href="Linux_Command_uptime.html">
+            
+                    
+                    Linux Command Uptime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.90" data-path="Linux_Command_user.html">
+            
+                <a href="Linux_Command_user.html">
+            
+                    
+                    Linux Command User
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.91" data-path="Linux_Command_vgextend.html">
+            
+                <a href="Linux_Command_vgextend.html">
+            
+                    
+                    Linux Command Vgextend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.92" data-path="Linux_Command_vim.html">
+            
+                <a href="Linux_Command_vim.html">
+            
+                    
+                    Linux Command Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.93" data-path="Linux_Command_vmstat.html">
+            
+                <a href="Linux_Command_vmstat.html">
+            
+                    
+                    Linux Command Vmstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.94" data-path="Linux_Command_who.html">
+            
+                <a href="Linux_Command_who.html">
+            
+                    
+                    Linux Command Who
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.95" data-path="Linux_Command_wrk.html">
+            
+                <a href="Linux_Command_wrk.html">
+            
+                    
+                    Linux Command Wrk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.96" data-path="Linux_Command_xargs.html">
+            
+                <a href="Linux_Command_xargs.html">
+            
+                    
+                    Linux Command Xargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.97" data-path="Linux_Command_zip.html">
+            
+                <a href="Linux_Command_zip.html">
+            
+                    
+                    Linux Command Zip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.98" data-path="Linux-Command_Printf.html">
+            
+                <a href="Linux-Command_Printf.html">
+            
+                    
+                    Linux Command Printf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../About.html">
+            
+                <a href="../About.html">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Overview.html">
+            
+                <a href="../Overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../tags.html">
+            
+                <a href="../tags.html">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Linux Command Ssh Keyscan</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#linux-command-ssh-keyscan"><b></b>Linux Command ssh-keyscan</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x7B80;&#x4ECB;"><b></b>1. &#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#2-&#x683C;&#x5F0F;"><b></b>2. &#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#3-&#x53C2;&#x6570;"><b></b>3. &#x53C2;&#x6570;</a></li><li><span class="title-icon "></span><a href="#4-&#x5B89;&#x5168;"><b></b>4. &#x5B89;&#x5168;</a></li><li><span class="title-icon "></span><a href="#5-&#x793A;&#x4F8B;"><b></b>5. &#x793A;&#x4F8B;</a></li></ul></ul></div><a href="#linux-command-ssh-keyscan" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="linux-command-ssh-keyscan"><a name="linux-command-ssh-keyscan" class="anchor-navigation-ex-anchor" href="#linux-command-ssh-keyscan"><i class="fa fa-link" aria-hidden="true"></i></a>Linux Command ssh-keyscan</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../tags.html#&#x8FDC;&#x7A0B;">&#x8FDC;&#x7A0B;</a></p></div><!-- tagsstop --><h2 id="1-&#x7B80;&#x4ECB;"><a name="1-&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#1-&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B80;&#x4ECB;</h2>
+<p>&#x5DE5;&#x5177;&#x7528;&#x6765;&#x6536;&#x96C6;&#x4E00;&#x7EC4;&#x4E3B;&#x673A;&#x7684; ssh &#x4E3B;&#x673A;&#x516C;&#x94A5; (host key), &#x8BBE;&#x8BA1;&#x76EE;&#x7684;&#x662F;&#x5E2E;&#x52A9;&#x5EFA;&#x7ACB;&#x548C;&#x9A8C;&#x8BC1; <code>ssh_known_hosts</code> &#x6587;&#x4EF6;.&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5C0F;&#x5DE7;&#x7684;&#x63A5;&#x53E3;&#x8BA9; shell &#x548C; perl &#x6587;&#x4EF6;&#x4F7F;&#x7528;.</p>
+<p>&#x4F7F;&#x7528;&#x4E86;&#x975E;&#x963B;&#x585E; socket I/O &#x51FD;&#x6570;, &#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x5E76;&#x884C;&#x8BBF;&#x95EE;&#x591A;&#x4E2A;&#x4E3B;&#x673A;, &#x56E0;&#x6B64;&#x5B83;&#x7684;&#x6548;&#x7387;&#x5F88;&#x9AD8;. &#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x6570;&#x5341;&#x79D2;&#x5185;&#x91C7;&#x96C6;&#x67D0;&#x57DF;&#x4E2D; 1,000 &#x53F0;&#x4E3B;&#x673A;&#x7684;&#x5BC6;&#x94A5;, &#x5373;&#x4F7F;&#x67D0;&#x4E9B;&#x4E3B;&#x673A;&#x79BB;&#x7EBF;&#x6216;&#x4E0D;&#x4F7F;&#x7528; ssh. &#x626B;&#x63CF;&#x7684;&#x65F6;&#x5019;&#x65E0;&#x987B;&#x767B;&#x5F55;&#x76EE;&#x6807;&#x4E3B;&#x673A;, &#x4E5F;&#x4E0D;&#x6D89;&#x53CA;&#x4EFB;&#x4F55;&#x52A0;&#x5BC6;&#x64CD;&#x4F5C;.</p>
+<h2 id="2-&#x683C;&#x5F0F;"><a name="2-&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#2-&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x683C;&#x5F0F;</h2>
+<pre class="language-"><code class="lang-bash">ssh-keyscan -words <span class="token punctuation">[</span>-v46 <span class="token punctuation">]</span> <span class="token punctuation">[</span>-p port <span class="token punctuation">]</span> <span class="token punctuation">[</span>-T <span class="token function">timeout</span> <span class="token punctuation">]</span> <span class="token punctuation">[</span>-t <span class="token builtin class-name">type</span> <span class="token punctuation">]</span> <span class="token punctuation">[</span>-f <span class="token function">file</span> <span class="token punctuation">]</span> <span class="token punctuation">[</span>host <span class="token operator">|</span> addrlist namelist <span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token punctuation">..</span>. <span class="token punctuation">]</span>
+</code></pre>
+<h2 id="3-&#x53C2;&#x6570;"><a name="3-&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#3-&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x53C2;&#x6570;</h2>
+<pre class="language-"><code class="lang-bash">-4&#xFF1A;&#x5F3A;&#x5236;&#x4F7F;&#x7528;IPv4&#x5730;&#x5740;&#xFF1B;
+-6&#xFF1A;&#x5F3A;&#x5236;&#x4F7F;&#x7528;IPv6&#x5730;&#x5740;&#xFF1B;
+-f&#xFF1A;&#x4ECE;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#x201C;&#x5730;&#x5740;&#x5217;&#x8868;/&#x540D;&#x5B57;&#x5217;&#x8868;&#x201D;&#xFF1B;
+-p&#xFF1A;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x7AEF;&#x53E3;&#xFF1B;
+-T&#xFF1A;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x5C1D;&#x8BD5;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF1B;
+-t&#xFF1A;&#x6307;&#x5B9A;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x5BC6;&#x94A5;&#x7C7B;&#x578B;&#xFF1B;
+-v&#xFF1A;&#x4FE1;&#x606F;&#x6A21;&#x5F0F;&#xFF0C;&#x6253;&#x5370;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#x3002;
+</code></pre>
+<h2 id="4-&#x5B89;&#x5168;"><a name="4-&#x5B89;&#x5168;" class="anchor-navigation-ex-anchor" href="#4-&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5B89;&#x5168;</h2>
+<p>&#x5982;&#x679C;&#x901A;&#x8FC7;&#x5EFA;&#x7ACB;&#x4E86; ssh_known_hosts &#x6587;&#x4EF6;, &#x4F46;&#x5374;&#x6CA1;&#x6709;&#x9A8C;&#x8BC1;&#x91CC;&#x9762;&#x7684;&#x516C;&#x94A5;, &#x7528;&#x6237;&#x5F88;&#x5BB9;&#x6613;&#x906D;&#x5230;&#x4E2D;&#x95F4;&#x4EBA; &#x653B;&#x51FB;. &#x800C;&#x53E6;&#x4E00;&#x65B9;&#x9762;, &#x5982;&#x679C;&#x5B89;&#x5168;&#x6A21;&#x578B;&#x5141;&#x8BB8;&#x8FD9;&#x4E2A;&#x98CE;&#x9669;, &#x521B;&#x5EFA; ssh_known_hosts &#x6587;&#x4EF6;&#x540E;,&#x80FD;&#x591F;&#x5E2E;&#x52A9;&#x68C0;&#x6D4B;&#x5DF2;&#x7ECF;&#x53D1;&#x8D77;&#x7684;&#x5BC6;&#x94A5;&#x7BE1;&#x6539;&#x6216;&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;.</p>
+<h2 id="5-&#x793A;&#x4F8B;"><a name="5-&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#5-&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x793A;&#x4F8B;</h2>
+<p>&#x663E;&#x793A; hostname &#x7684; rsa1 &#x4E3B;&#x673A;&#x5BC6;&#x94A5;:</p>
+<pre class="language-"><code class="lang-bash">$ ssh-keyscan <span class="token function">hostname</span>
+k8s2-master ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtp4mHchzEKG17pseHL3sIruTTz3mdVUOdkSxjKecozFmCXBE6+gckswKWcY0p/gM5a47mf06fKMbN8m3F+mvDyKhzyry7z3I5UhL4NLluEWfJrUKV+K64hTt7qphHMnkBht+vDs6cSdRkD2VxWatQZ3MBAziLUKFlW8I5fVkGNgjuWyv0gaDDjZu1IqmKbJgd1hvRVuod0cM8xxlfXyx+owzJ2AnjKIzYM0YW3qvZuoU736Vpw4+XaQl0m0l6OBe531WyCH0WgO0613fgn0yQNJic0AxSv1nJmQ0C9h27F/xJ+3St18GO7T/unjARu8/MCgNWDMHm8vmeTFnSRfh5
+<span class="token comment"># k8s2-master:22 SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3</span>
+k8s2-master ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGCOYfqR4m29v1dhNa+NZdB/mr9LP+kuOSkvnwhNS59LnAN0rDbtdRC6nqEnhfTRZBpNULm5F8hq6oc3qDi/Nh0<span class="token operator">=</span>
+<span class="token comment"># k8s2-master:22 SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3</span>
+k8s2-master ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPNoeenh2kx3GDGJ2BvZRXY8AxtJ9AvowhVdV6LBckRS
+</code></pre>
+<p>&#x53C2;&#x8003;&#xFF1A;</p>
+<ul>
+<li><a href="https://man7.org/linux/man-pages/man1/ssh-keyscan.1.html" target="_blank">ssh-keyscan(1) &#x2014; Linux manual page</a></li>
+<li><a href="https://linux.die.net/man/1/ssh-keyscan" target="_blank">ssh-keyscan(1) - Linux man page</a></li>
+<li><a href="https://www.tutorialspoint.com/unix_commands/ssh-keyscan.htm" target="_blank">ssh-keyscan - Unix, Linux Command</a></li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ghostwritten &#x6D59;ICP&#x5907;2020032454&#x53F7; 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-06-23 17:15:46
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Linux_Command_ss.html" class="navigation navigation-prev " aria-label="Previous page: Linux Command Ss">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Linux_Command_sshpass.html" class="navigation navigation-next " aria-label="Next page: Linux Command Sshpass">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux Command Ssh Keyscan","level":"1.2.71","depth":2,"next":{"title":"Linux Command Sshpass","level":"1.2.72","depth":2,"path":"Linux-Command/Linux_Command_sshpass.md","ref":"Linux-Command/Linux_Command_sshpass.md","articles":[]},"previous":{"title":"Linux Command Ss","level":"1.2.70","depth":2,"path":"Linux-Command/Linux_Command_ss.md","ref":"Linux-Command/Linux_Command_ss.md","articles":[]},"dir":"ltr"},"config":{"plugins":["3-ba","accordion","advanced-emoji","anchor-navigation-ex","baidu-tongji","change_girls","custom-favicon","donate","chapter-fold","edit-link","flexible-alerts","github-buttons","github","lightbox","image-captions","insert-logo","musicxml","prism","prism-themes","pageview-count","-highlight","-search","-lunr","rss","search-plus","splitter","-sharing","sharing-plus","sidebar-style","theme-default","tags","tbfed-pagefooter"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"zongxun","title":"《Linux Command Docs》"},"tbfed-pagefooter":{"copyright":"Copyright &copy ghostwritten 浙ICP备2020032454号 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-holi-theme.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/Ghostwritten"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"change_girls":{"time":10,"urls":["https://images2.alphacoders.com/870/870886.jpg","https://images7.alphacoders.com/110/1104374.jpg","https://images.alphacoders.com/578/578306.jpg","https://images3.alphacoders.com/730/730144.jpg","https://images4.alphacoders.com/238/238066.jpg","https://images3.alphacoders.com/882/882548.jpg","https://images.alphacoders.com/101/10131.jpg","https://images7.alphacoders.com/976/976088.jpg"]},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://github.com/Ghostwritten/linux-command-docs/blob/gh-pages/assets/imgs/aplipay.png?raw=true","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://github.com/Ghostwritten/linux-command-docs/blob/gh-pages/assets/imgs/wechat.png?raw=true","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["linux-command"],"title":"Linux Command Docs","description":"This is the best book ever.","author":"Zong Xun","feed_url":"http://smoothies.com.cn/rss","site_url":"https://smoothies.com.cn/gitbook-docs/","managingEditor":"writer@smoothies.com.cn (Zong Xun)","webMaster":"webmaster@smoothies.com.cn (Zong Xun)"},"musicxml":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"assets/imgs/Blade_Runner_Rachel.ico","lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"github-buttons":{"buttons":[{"user":"Ghostwritten","repo":"linux-command-docs","type":"star","count":true,"size":"small"}]},"custom-favicon":{},"tags":{"placement":"top"},"3-ba":{"configuration":"auto","token":"9ffc0dce8d7079aceab6b0bc18eb626b"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Danger"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper"],"douban":false,"facebook":false,"weibo":false,"twitter":false,"pocket":false,"google":false,"qzone":false},"edit-link":{"label":"Edit","base":"https://github.com/Ghostwritten/linux-command-docs/edit/master/"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://images3.alphacoders.com/730/730144.jpg"},"search-plus":{},"image-captions":{"caption":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"宗勋 - zongxun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"index.html#fig1.1.1","level":"1.1","list_caption":"Figure: Twitter: cnghostwritten","alt":"Twitter: cnghostwritten","nro":1,"url":"https://img.shields.io/twitter/follow/cnghostwritten?style=social","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Twitter: cnghostwritten","attributes":{},"skip":false,"key":"1.1.1"},{"backlink":"index.html#fig1.1.2","level":"1.1","list_caption":"Figure: 爱死亡机器人","alt":"爱死亡机器人","nro":2,"url":"https://github.com/Ghostwritten/linux-command-docs/blob/gh-pages/assets/imgs/public.jpg?raw=true","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"爱死亡机器人","attributes":{},"skip":false,"key":"1.1.2"},{"backlink":"Linux-Command/index.html#fig1.2.1","level":"1.2","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":3,"url":"https://img-blog.csdnimg.cn/9afa23d94f0e472cae99dc269ec70ab2.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"Linux-Command/Linux_Command_ab.html#fig1.2.1.1","level":"1.2.1","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":4,"url":"https://img-blog.csdnimg.cn/4d6f0c49b7644840a7e9fd5d22d95d80.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.1.1"},{"backlink":"Linux-Command/Linux_Command_apt.html#fig1.2.3.1","level":"1.2.3","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":5,"url":"https://img-blog.csdnimg.cn/403fbbebe54c4195b3eee17b6ab64188.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.3.1"},{"backlink":"Linux-Command/Linux_Command_apt.html#fig1.2.3.2","level":"1.2.3","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":6,"url":"https://img-blog.csdnimg.cn/f75a130c05ac4ed3b0367ac54a2349a5.webp#pic_center","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.3.2"},{"backlink":"Linux-Command/Linux_Command_awk.html#fig1.2.5.1","level":"1.2.5","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":7,"url":"https://img-blog.csdnimg.cn/e94a6acb70e04d89b39edcc4c295fcea.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.5.1"},{"backlink":"Linux-Command/Linux_Command_cut.html#fig1.2.10.1","level":"1.2.10","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":8,"url":"https://img-blog.csdnimg.cn/3f9909aef33c4218b8400b9d931e99a4.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.10.1"},{"backlink":"Linux-Command/Linux_Command_Date.html#fig1.2.11.1","level":"1.2.11","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":9,"url":"https://img-blog.csdnimg.cn/b9eb2eba04c144e79ac3672fd67ba515.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.11.1"},{"backlink":"Linux-Command/Linux_Command_diff.html#fig1.2.13.1","level":"1.2.13","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":10,"url":"https://img-blog.csdnimg.cn/3d4a795045ee40c98ca47c90dbd2f7a9.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.13.1"},{"backlink":"Linux-Command/Linux_Command_diff.html#fig1.2.13.2","level":"1.2.13","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":11,"url":"https://img-blog.csdnimg.cn/20200507230417936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.13.2"},{"backlink":"Linux-Command/Linux_Command_dnf.html#fig1.2.16.1","level":"1.2.16","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":12,"url":"https://img-blog.csdnimg.cn/6cc06511bf244d3a8e959b975c5d2fee.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.16.1"},{"backlink":"Linux-Command/Linux_Command_dpkg.html#fig1.2.17.1","level":"1.2.17","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":13,"url":"https://img-blog.csdnimg.cn/5884bd78dcbd41dd965db09c02681f32.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.17.1"},{"backlink":"Linux-Command/Linux_Command_dstat.html#fig1.2.18.1","level":"1.2.18","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":14,"url":"https://img-blog.csdnimg.cn/20201009222659633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.18.1"},{"backlink":"Linux-Command/Linux_Command_du.html#fig1.2.19.1","level":"1.2.19","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":15,"url":"https://img-blog.csdnimg.cn/acc6ec7d923847f493f5b686b5f3cf3c.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.19.1"},{"backlink":"Linux-Command/Linux_Command_ebook-convert.html#fig1.2.21.1","level":"1.2.21","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":16,"url":"https://img-blog.csdnimg.cn/b4d5304777df40e09c5072abb4c6f8f6.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.21.1"},{"backlink":"Linux-Command/Linux_Command_fdisk.html#fig1.2.25.1","level":"1.2.25","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":17,"url":"https://img-blog.csdnimg.cn/83979b13d65f4161a5c10ce3fa4b2f0c.jpeg#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.25.1"},{"backlink":"Linux-Command/Linux_Command_find.html#fig1.2.26.1","level":"1.2.26","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":18,"url":"https://img-blog.csdnimg.cn/48d0ec97e4b948238ac68617ac4ee59f.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.26.1"},{"backlink":"Linux-Command/Linux_Command_gpg.html#fig1.2.28.1","level":"1.2.28","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":19,"url":"https://img-blog.csdnimg.cn/3cf048c7a3de44a8b77f238136fbce1e.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.28.1"},{"backlink":"Linux-Command/Linux_Command_gpg.html#fig1.2.28.2","level":"1.2.28","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":20,"url":"https://img-blog.csdnimg.cn/38bf1860b14041b99fbf0aec108bedda.gif#pic_center","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.28.2"},{"backlink":"Linux-Command/Linux_Command_grep.html#fig1.2.29.1","level":"1.2.29","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":21,"url":"https://img-blog.csdnimg.cn/f3c88b12d9ab4d8c98b11bfe261e5c0d.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.29.1"},{"backlink":"Linux-Command/Linux_Command_gzip.html#fig1.2.31.1","level":"1.2.31","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":22,"url":"https://img-blog.csdnimg.cn/343e1a4bc36e47acb6a92c6db49aec62.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.31.1"},{"backlink":"Linux-Command/Linux_Command_jq.html#fig1.2.38.1","level":"1.2.38","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":23,"url":"https://img-blog.csdnimg.cn/310ecb3fa2f84bf984c0adab84c83e80.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.38.1"},{"backlink":"Linux-Command/Linux_Command_lvextend.html#fig1.2.40.1","level":"1.2.40","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":24,"url":"https://img-blog.csdnimg.cn/b099f4089a1f4cd1b1f6d5144abe7895.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.40.1"},{"backlink":"Linux-Command/Linux_Command_lvextend.html#fig1.2.40.2","level":"1.2.40","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":25,"url":"https://img-blog.csdnimg.cn/8880f6f5c32742ce95d83c91ac51c650.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.40.2"},{"backlink":"Linux-Command/Linux_Command_lz4.html#fig1.2.41.1","level":"1.2.41","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":26,"url":"https://img-blog.csdnimg.cn/d57974856682420a90bdb3accb51c1c5.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.41.1"},{"backlink":"Linux-Command/Linux_Command_mount.html#fig1.2.42.1","level":"1.2.42","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":27,"url":"https://img-blog.csdnimg.cn/452528ba84834c7392f5000a2e7a3900.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.42.1"},{"backlink":"Linux-Command/Linux_Command_mount.html#fig1.2.42.2","level":"1.2.42","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":28,"url":"https://img-blog.csdnimg.cn/610090e5de144d528193d6cbc7e7ea52.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.42.2"},{"backlink":"Linux-Command/Linux_Command_mount.html#fig1.2.42.3","level":"1.2.42","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":29,"url":"https://img-blog.csdnimg.cn/01fda885423f44209593449a37d58d69.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.42.3"},{"backlink":"Linux-Command/Linux_Command_mv.html#fig1.2.44.1","level":"1.2.44","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":30,"url":"https://img-blog.csdnimg.cn/52df4bdd0dfd4faebd1922d758ab5507.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.44.1"},{"backlink":"Linux-Command/Linux_Command_namp.html#fig1.2.45.1","level":"1.2.45","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":31,"url":"https://img-blog.csdnimg.cn/d56415a2de524d28958b8b0c68914b4c.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.45.1"},{"backlink":"Linux-Command/Linux_Command_namp.html#fig1.2.45.2","level":"1.2.45","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":32,"url":"https://img-blog.csdnimg.cn/b488204a290b44debc25fb527608a1c1.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.45.2"},{"backlink":"Linux-Command/Linux_Command_nano.html#fig1.2.46.1","level":"1.2.46","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":33,"url":"https://img-blog.csdnimg.cn/3c8ff82a6283459a879fa2ed504295a6.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.46.1"},{"backlink":"Linux-Command/Linux_Command_nano.html#fig1.2.46.2","level":"1.2.46","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":34,"url":"https://img-blog.csdnimg.cn/1ecc4b6796074e03a3d456df67260626.gif#pic_center","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.46.2"},{"backlink":"Linux-Command/Linux_Command_ping.html#fig1.2.54.1","level":"1.2.54","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":35,"url":"https://img-blog.csdnimg.cn/79dfb080b34c40e689960d64752015a0.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.54.1"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.1","level":"1.2.57","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":36,"url":"https://img-blog.csdnimg.cn/9ced35d680764269b04246022bc02b15.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.57.1"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.2","level":"1.2.57","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":37,"url":"https://img-blog.csdnimg.cn/73314173eb4b47fbac363020a315ef9b.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.57.2"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.3","level":"1.2.57","list_caption":"Figure: a产生u更x详细的输出","alt":"a产生u更x详细的输出","nro":38,"url":"https://img-blog.csdnimg.cn/eb857f2418704c89b35832d4e8ae6d9f.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"a产生u更x详细的输出","attributes":{},"skip":false,"key":"1.2.57.3"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.4","level":"1.2.57","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":39,"url":"https://img-blog.csdnimg.cn/1d17b17583d444bb98964da2e390c0d4.png","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.57.4"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.5","level":"1.2.57","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":40,"url":"https://img-blog.csdnimg.cn/95556d10191e47758f59e71b407b9ca8.png","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.57.5"},{"backlink":"Linux-Command/Linux_Command_rsync.html#fig1.2.63.1","level":"1.2.63","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":41,"url":"https://img-blog.csdnimg.cn/354bb73bca7648a78d9124af56376dc1.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.63.1"},{"backlink":"Linux-Command/Linux_Command_sed.html#fig1.2.66.1","level":"1.2.66","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":42,"url":"https://img-blog.csdnimg.cn/198a1290fb1a4b92a4ae2dcf6cc3877e.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.66.1"},{"backlink":"Linux-Command/Linux_Command_snap.html#fig1.2.67.1","level":"1.2.67","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":43,"url":"https://img-blog.csdnimg.cn/369b0304cf9e4fd2bd9d83bfde8a485c.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.67.1"},{"backlink":"Linux-Command/Linux_Command_snap.html#fig1.2.67.2","level":"1.2.67","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":44,"url":"https://img-blog.csdnimg.cn/55caac914c22430a84081d557d94d334.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.67.2"},{"backlink":"Linux-Command/Linux_Command_snap.html#fig1.2.67.3","level":"1.2.67","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":45,"url":"https://img-blog.csdnimg.cn/3702e85e34a24f6fbcc50e9226d71c1e.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.67.3"},{"backlink":"Linux-Command/Linux_Command_snap.html#fig1.2.67.4","level":"1.2.67","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":46,"url":"https://img-blog.csdnimg.cn/70cd2ce051304af786b014b9b195d8c2.png","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.67.4"},{"backlink":"Linux-Command/Linux_Command_sort.html#fig1.2.68.1","level":"1.2.68","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":47,"url":"https://img-blog.csdnimg.cn/b6c135db4f1a4155a0e306913757c345.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.68.1"},{"backlink":"Linux-Command/Linux_Command_split.html#fig1.2.69.1","level":"1.2.69","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":48,"url":"https://img-blog.csdnimg.cn/c93a5b789b5149449e9ea45e5d354328.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.69.1"},{"backlink":"Linux-Command/Linux_Command_strace.html#fig1.2.73.1","level":"1.2.73","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":49,"url":"https://img-blog.csdnimg.cn/cbb3d8851abd4bfba3fd45e01841ed51.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.73.1"},{"backlink":"Linux-Command/Linux_Command_sysbench.html#fig1.2.75.1","level":"1.2.75","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":50,"url":"https://img-blog.csdnimg.cn/2e32c32b17ae4a81ab71b5ab105b2107.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.75.1"},{"backlink":"Linux-Command/Linux_Command_tar.html#fig1.2.76.1","level":"1.2.76","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":51,"url":"https://img-blog.csdnimg.cn/198d920091864869b38ab6f36b096846.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.76.1"},{"backlink":"Linux-Command/Linux_Command_tc.html#fig1.2.77.1","level":"1.2.77","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":52,"url":"https://img-blog.csdnimg.cn/a847d39afe1145298a5c2ba2a59acd51.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.77.1"},{"backlink":"Linux-Command/Linux_Command_tee.html#fig1.2.79.1","level":"1.2.79","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":53,"url":"https://img-blog.csdnimg.cn/a3de4dde357c4a8a95d3757e47d82e51.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.79.1"},{"backlink":"Linux-Command/Linux_Command_test.html#fig1.2.81.1","level":"1.2.81","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":54,"url":"https://img-blog.csdnimg.cn/2bed06f3da22438c8538d7a8c642129c.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.81.1"},{"backlink":"Linux-Command/Linux_Command_tput.html#fig1.2.83.1","level":"1.2.83","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":55,"url":"https://img-blog.csdnimg.cn/3d7ec0a227da451797729bc917a5f301.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_13,color_FFFFFF,t_70,g_se,x_16","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.83.1"},{"backlink":"Linux-Command/Linux_Command_tput.html#fig1.2.83.2","level":"1.2.83","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":56,"url":"https://img-blog.csdnimg.cn/da271b6d90a54f52b0eb0e8d4f843978.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.83.2"},{"backlink":"Linux-Command/Linux_Command_tput.html#fig1.2.83.3","level":"1.2.83","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":57,"url":"https://img-blog.csdnimg.cn/e15daa51887d4b9c828f498660d85724.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.83.3"},{"backlink":"Linux-Command/Linux_Command_tput.html#fig1.2.83.4","level":"1.2.83","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":58,"url":"https://img-blog.csdnimg.cn/237295b1bf174717b906c3b18b9f0790.gif#pic_center","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.83.4"},{"backlink":"Linux-Command/Linux_Command_tr.html#fig1.2.84.1","level":"1.2.84","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":59,"url":"https://img-blog.csdnimg.cn/c2e3e5f4654249688d25423477d0de66.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.84.1"},{"backlink":"Linux-Command/Linux_Command_tree.html#fig1.2.87.1","level":"1.2.87","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":60,"url":"https://img-blog.csdnimg.cn/c852b4a42628403e9f1671ddb1992c14.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.87.1"},{"backlink":"Linux-Command/Linux_Command_uniq.html#fig1.2.88.1","level":"1.2.88","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":61,"url":"https://img-blog.csdnimg.cn/db8aba51539a47adbf85188c2006940b.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.88.1"},{"backlink":"Linux-Command/Linux_Command_vgextend.html#fig1.2.91.1","level":"1.2.91","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":62,"url":"https://img-blog.csdnimg.cn/7467b9e33fb94337b378a539febc9f99.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.91.1"},{"backlink":"Linux-Command/Linux_Command_vgextend.html#fig1.2.91.2","level":"1.2.91","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":63,"url":"https://img-blog.csdnimg.cn/2d1be94f5b414a349bc6936f2675c9ad.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.91.2"},{"backlink":"Linux-Command/Linux_Command_vgextend.html#fig1.2.91.3","level":"1.2.91","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":64,"url":"https://img-blog.csdnimg.cn/b4c7b8d5ee62422990fa1ef6ad19c960.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.91.3"},{"backlink":"Linux-Command/Linux_Command_vgextend.html#fig1.2.91.4","level":"1.2.91","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":65,"url":"https://img-blog.csdnimg.cn/d2a2fe0fd5034c509e9164457d9625c7.png","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.91.4"},{"backlink":"Linux-Command/Linux_Command_xargs.html#fig1.2.96.1","level":"1.2.96","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":66,"url":"https://img-blog.csdnimg.cn/02ed68580d694883901d7c2c866af945.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.96.1"},{"backlink":"Linux-Command/Linux_Command_zip.html#fig1.2.97.1","level":"1.2.97","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":67,"url":"https://img-blog.csdnimg.cn/0f5e605ef19b48e294135941117e3fa3.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.97.1"},{"backlink":"Linux-Command/Linux-Command_Printf.html#fig1.2.98.1","level":"1.2.98","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":68,"url":"https://img-blog.csdnimg.cn/5b0047b571ad45dfa8f78c8009cb5887.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.98.1"}]},"title":"Linux Command Docs","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":"https://twitter.com/cnghostwritten","weibo":null},"sidebar":{"Docker":"https://smoothies.com.cn/docker-docs/Overview.html","Blog":"https://smoothies.com.cn","Kubernetes":"https://smoothies.com.cn/kubernetes-docs/Overview.html","Go":"https://smoothies.com.cn/go-docs/Overview.html","Prometheus":"https://smoothies.com.cn/prometheus-docs/Overview.html","Command":"https://smoothies.com.cn/linux-command-docs/Overview.html","Shell":"https://smoothies.com.cn/shell-docs/Overview.html","Linux":"https://smoothies.com.cn/linux-docs/Overview.html","Gitbook":"https://smoothies.com.cn/gitbook-docs/Overview.html","Python":"https://smoothies.com.cn/python-docs/Overview.html","Exam":"https://ghostwritten.gitbook.io/kubernetes-exam-in-action/"}},"gitbook":"*","description":"这是一本关于 Linux Command 的书籍"},"file":{"path":"Linux-Command/Linux_Command_ssh-keyscan.md","mtime":"2022-06-23T17:15:46.392Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-14T08:05:05.559Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

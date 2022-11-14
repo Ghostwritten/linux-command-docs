@@ -1,0 +1,2097 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linux Command Perf · Linux Command Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="宗勋 - zongxun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-holi-theme.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Linux_Command_pidstat.html" />
+    
+    
+    <link rel="prev" href="Linux_Command_passwd.html" />
+    
+
+    <link href="http://smoothies.com.cn/rss" title="Linux Command Docs" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Ghostwritten","repo":"linux-command-docs","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/docker-docs/Overview.html" target="_blank" class="custom-link">Docker</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn" target="_blank" class="custom-link">Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/kubernetes-docs/Overview.html" target="_blank" class="custom-link">Kubernetes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/go-docs/Overview.html" target="_blank" class="custom-link">Go</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/prometheus-docs/Overview.html" target="_blank" class="custom-link">Prometheus</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-command-docs/Overview.html" target="_blank" class="custom-link">Command</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/shell-docs/Overview.html" target="_blank" class="custom-link">Shell</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-docs/Overview.html" target="_blank" class="custom-link">Linux</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/gitbook-docs/Overview.html" target="_blank" class="custom-link">Gitbook</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/python-docs/Overview.html" target="_blank" class="custom-link">Python</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://ghostwritten.gitbook.io/kubernetes-exam-in-action/" target="_blank" class="custom-link">Exam</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux Command
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Linux_Command_ab.html">
+            
+                <a href="Linux_Command_ab.html">
+            
+                    
+                    Linux Command Ab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Linux_Command_Alias.html">
+            
+                <a href="Linux_Command_Alias.html">
+            
+                    
+                    Linux Command Alias
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Linux_Command_apt.html">
+            
+                <a href="Linux_Command_apt.html">
+            
+                    
+                    Linux Command Apt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="Linux_Command_arp.html">
+            
+                <a href="Linux_Command_arp.html">
+            
+                    
+                    Linux Command Arp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="Linux_Command_awk.html">
+            
+                <a href="Linux_Command_awk.html">
+            
+                    
+                    Linux Command Awk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="Linux_Command_bcc.html">
+            
+                <a href="Linux_Command_bcc.html">
+            
+                    
+                    Linux Command Bcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="Linux_Command_chcon.html">
+            
+                <a href="Linux_Command_chcon.html">
+            
+                    
+                    Linux Command Chcon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="Linux_Command_cmp.html">
+            
+                <a href="Linux_Command_cmp.html">
+            
+                    
+                    Linux Command Cmp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="Linux_Command_curl.html">
+            
+                <a href="Linux_Command_curl.html">
+            
+                    
+                    Linux Command Curl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="Linux_Command_cut.html">
+            
+                <a href="Linux_Command_cut.html">
+            
+                    
+                    Linux Command Cut
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="Linux_Command_Date.html">
+            
+                <a href="Linux_Command_Date.html">
+            
+                    
+                    Linux Command Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="Linux_Command_dd.html">
+            
+                <a href="Linux_Command_dd.html">
+            
+                    
+                    Linux Command Dd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="Linux_Command_diff.html">
+            
+                <a href="Linux_Command_diff.html">
+            
+                    
+                    Linux Command Diff
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="Linux_Command_dig.html">
+            
+                <a href="Linux_Command_dig.html">
+            
+                    
+                    Linux Command Dig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="Linux_Command_dmsetup.html">
+            
+                <a href="Linux_Command_dmsetup.html">
+            
+                    
+                    Linux Command Dmsetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="Linux_Command_dnf.html">
+            
+                <a href="Linux_Command_dnf.html">
+            
+                    
+                    Linux Command Dnf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="Linux_Command_dpkg.html">
+            
+                <a href="Linux_Command_dpkg.html">
+            
+                    
+                    Linux Command Dpkg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="Linux_Command_dstat.html">
+            
+                <a href="Linux_Command_dstat.html">
+            
+                    
+                    Linux Command Dstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="Linux_Command_du.html">
+            
+                <a href="Linux_Command_du.html">
+            
+                    
+                    Linux Command Du
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="Linux_Command_e2fsck.html">
+            
+                <a href="Linux_Command_e2fsck.html">
+            
+                    
+                    Linux Command E 2 Fsck
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="Linux_Command_ebook-convert.html">
+            
+                <a href="Linux_Command_ebook-convert.html">
+            
+                    
+                    Linux Command Ebook Convert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="Linux_Command_echo.html">
+            
+                <a href="Linux_Command_echo.html">
+            
+                    
+                    Linux Command Echo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="Linux_Command_egrep.html">
+            
+                <a href="Linux_Command_egrep.html">
+            
+                    
+                    Linux Command Egrep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="Linux_Command_emacs.html">
+            
+                <a href="Linux_Command_emacs.html">
+            
+                    
+                    Linux Command Emacs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="Linux_Command_fdisk.html">
+            
+                <a href="Linux_Command_fdisk.html">
+            
+                    
+                    Linux Command Fdisk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="Linux_Command_find.html">
+            
+                <a href="Linux_Command_find.html">
+            
+                    
+                    Linux Command Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="Linux_Command_fio.html">
+            
+                <a href="Linux_Command_fio.html">
+            
+                    
+                    Linux Command Fio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="Linux_Command_gpg.html">
+            
+                <a href="Linux_Command_gpg.html">
+            
+                    
+                    Linux Command Gpg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="Linux_Command_grep.html">
+            
+                <a href="Linux_Command_grep.html">
+            
+                    
+                    Linux Command Grep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.30" data-path="Linux_Command_group.html">
+            
+                <a href="Linux_Command_group.html">
+            
+                    
+                    Linux Command Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.31" data-path="Linux_Command_gzip.html">
+            
+                <a href="Linux_Command_gzip.html">
+            
+                    
+                    Linux Command Gzip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.32" data-path="Linux_Command_hping3.html">
+            
+                <a href="Linux_Command_hping3.html">
+            
+                    
+                    Linux Command Hping 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.33" data-path="Linux_Command_iostat.html">
+            
+                <a href="Linux_Command_iostat.html">
+            
+                    
+                    Linux Command Iostat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.34" data-path="Linux_Command_ip.html">
+            
+                <a href="Linux_Command_ip.html">
+            
+                    
+                    Linux Command Ip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.35" data-path="Linux_Command_iperf3.html">
+            
+                <a href="Linux_Command_iperf3.html">
+            
+                    
+                    Linux Command Iperf 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.36" data-path="Linux_Command_ipmitool.html">
+            
+                <a href="Linux_Command_ipmitool.html">
+            
+                    
+                    Linux Command Ipmitool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.37" data-path="Linux_Command_iptables.html">
+            
+                <a href="Linux_Command_iptables.html">
+            
+                    
+                    Linux Command Iptables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.38" data-path="Linux_Command_jq.html">
+            
+                <a href="Linux_Command_jq.html">
+            
+                    
+                    Linux Command Jq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.39" data-path="Linux_Command_losetup.html">
+            
+                <a href="Linux_Command_losetup.html">
+            
+                    
+                    Linux Command Losetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.40" data-path="Linux_Command_lvextend.html">
+            
+                <a href="Linux_Command_lvextend.html">
+            
+                    
+                    Linux Command Lvextend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.41" data-path="Linux_Command_lz4.html">
+            
+                <a href="Linux_Command_lz4.html">
+            
+                    
+                    Linux Command Lz 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.42" data-path="Linux_Command_mount.html">
+            
+                <a href="Linux_Command_mount.html">
+            
+                    
+                    Linux Command Mount
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.43" data-path="Linux_Command_mpstat.html">
+            
+                <a href="Linux_Command_mpstat.html">
+            
+                    
+                    Linux Command Mpstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.44" data-path="Linux_Command_mv.html">
+            
+                <a href="Linux_Command_mv.html">
+            
+                    
+                    Linux Command Mv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.45" data-path="Linux_Command_namp.html">
+            
+                <a href="Linux_Command_namp.html">
+            
+                    
+                    Linux Command Namp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.46" data-path="Linux_Command_nano.html">
+            
+                <a href="Linux_Command_nano.html">
+            
+                    
+                    Linux Command Nano
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.47" data-path="Linux_Command_ncat.html">
+            
+                <a href="Linux_Command_ncat.html">
+            
+                    
+                    Linux Command Ncat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.48" data-path="Linux_Command_Nethogs.html">
+            
+                <a href="Linux_Command_Nethogs.html">
+            
+                    
+                    Linux Command Nethogs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.49" data-path="Linux_Command_netstat.html">
+            
+                <a href="Linux_Command_netstat.html">
+            
+                    
+                    Linux Command Netstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.50" data-path="Linux_Command_nsenter.html">
+            
+                <a href="Linux_Command_nsenter.html">
+            
+                    
+                    Linux Command Nsenter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.51" data-path="Linux_Command_passwd.html">
+            
+                <a href="Linux_Command_passwd.html">
+            
+                    
+                    Linux Command Passwd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.52" data-path="Linux_Command_perf.html">
+            
+                <a href="Linux_Command_perf.html">
+            
+                    
+                    Linux Command Perf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.53" data-path="Linux_Command_pidstat.html">
+            
+                <a href="Linux_Command_pidstat.html">
+            
+                    
+                    Linux Command Pidstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.54" data-path="Linux_Command_ping.html">
+            
+                <a href="Linux_Command_ping.html">
+            
+                    
+                    Linux Command Ping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.55" data-path="Linux_Command_pmap.html">
+            
+                <a href="Linux_Command_pmap.html">
+            
+                    
+                    Linux Command Pmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.56" data-path="Linux_Command_popd.html">
+            
+                <a href="Linux_Command_popd.html">
+            
+                    
+                    Linux Command Popd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.57" data-path="Linux_Command_ps.html">
+            
+                <a href="Linux_Command_ps.html">
+            
+                    
+                    Linux Command Ps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.58" data-path="Linux_Command_pstree.html">
+            
+                <a href="Linux_Command_pstree.html">
+            
+                    
+                    Linux Command Pstree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.59" data-path="Linux_Command_pushd.html">
+            
+                <a href="Linux_Command_pushd.html">
+            
+                    
+                    Linux Command Pushd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.60" data-path="Linux_Command_read.html">
+            
+                <a href="Linux_Command_read.html">
+            
+                    
+                    Linux Command Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.61" data-path="Linux_Command_route.html">
+            
+                <a href="Linux_Command_route.html">
+            
+                    
+                    Linux Command Route
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.62" data-path="Linux_Command_rpm.html">
+            
+                <a href="Linux_Command_rpm.html">
+            
+                    
+                    Linux Command Rpm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.63" data-path="Linux_Command_rsync.html">
+            
+                <a href="Linux_Command_rsync.html">
+            
+                    
+                    Linux Command Rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.64" data-path="Linux_Command_sar.html">
+            
+                <a href="Linux_Command_sar.html">
+            
+                    
+                    Linux Command Sar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.65" data-path="Linux_Command_screen.html">
+            
+                <a href="Linux_Command_screen.html">
+            
+                    
+                    Linux Command Screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.66" data-path="Linux_Command_sed.html">
+            
+                <a href="Linux_Command_sed.html">
+            
+                    
+                    Linux Command Sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.67" data-path="Linux_Command_snap.html">
+            
+                <a href="Linux_Command_snap.html">
+            
+                    
+                    Linux Command Snap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.68" data-path="Linux_Command_sort.html">
+            
+                <a href="Linux_Command_sort.html">
+            
+                    
+                    Linux Command Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.69" data-path="Linux_Command_split.html">
+            
+                <a href="Linux_Command_split.html">
+            
+                    
+                    Linux Command Split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.70" data-path="Linux_Command_ss.html">
+            
+                <a href="Linux_Command_ss.html">
+            
+                    
+                    Linux Command Ss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.71" data-path="Linux_Command_ssh-keyscan.html">
+            
+                <a href="Linux_Command_ssh-keyscan.html">
+            
+                    
+                    Linux Command Ssh Keyscan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.72" data-path="Linux_Command_sshpass.html">
+            
+                <a href="Linux_Command_sshpass.html">
+            
+                    
+                    Linux Command Sshpass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.73" data-path="Linux_Command_strace.html">
+            
+                <a href="Linux_Command_strace.html">
+            
+                    
+                    Linux Command Strace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.74" data-path="Linux_Command_stress.html">
+            
+                <a href="Linux_Command_stress.html">
+            
+                    
+                    Linux Command Stress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.75" data-path="Linux_Command_sysbench.html">
+            
+                <a href="Linux_Command_sysbench.html">
+            
+                    
+                    Linux Command Sysbench
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.76" data-path="Linux_Command_tar.html">
+            
+                <a href="Linux_Command_tar.html">
+            
+                    
+                    Linux Command Tar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.77" data-path="Linux_Command_tc.html">
+            
+                <a href="Linux_Command_tc.html">
+            
+                    
+                    Linux Command Tc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.78" data-path="Linux_Command_tcpdump.html">
+            
+                <a href="Linux_Command_tcpdump.html">
+            
+                    
+                    Linux Command Tcpdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.79" data-path="Linux_Command_tee.html">
+            
+                <a href="Linux_Command_tee.html">
+            
+                    
+                    Linux Command Tee
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.80" data-path="Linux_Command_telnet.html">
+            
+                <a href="Linux_Command_telnet.html">
+            
+                    
+                    Linux Command Telnet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.81" data-path="Linux_Command_test.html">
+            
+                <a href="Linux_Command_test.html">
+            
+                    
+                    Linux Command Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.82" data-path="Linux_Command_touch.html">
+            
+                <a href="Linux_Command_touch.html">
+            
+                    
+                    Linux Command Touch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.83" data-path="Linux_Command_tput.html">
+            
+                <a href="Linux_Command_tput.html">
+            
+                    
+                    Linux Command Tput
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.84" data-path="Linux_Command_tr.html">
+            
+                <a href="Linux_Command_tr.html">
+            
+                    
+                    Linux Command Tr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.85" data-path="Linux_Command_traceroute.html">
+            
+                <a href="Linux_Command_traceroute.html">
+            
+                    
+                    Linux Command Traceroute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.86" data-path="Linux_Command_trap.html">
+            
+                <a href="Linux_Command_trap.html">
+            
+                    
+                    Linux Command Trap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.87" data-path="Linux_Command_tree.html">
+            
+                <a href="Linux_Command_tree.html">
+            
+                    
+                    Linux Command Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.88" data-path="Linux_Command_uniq.html">
+            
+                <a href="Linux_Command_uniq.html">
+            
+                    
+                    Linux Command Uniq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.89" data-path="Linux_Command_uptime.html">
+            
+                <a href="Linux_Command_uptime.html">
+            
+                    
+                    Linux Command Uptime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.90" data-path="Linux_Command_user.html">
+            
+                <a href="Linux_Command_user.html">
+            
+                    
+                    Linux Command User
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.91" data-path="Linux_Command_vgextend.html">
+            
+                <a href="Linux_Command_vgextend.html">
+            
+                    
+                    Linux Command Vgextend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.92" data-path="Linux_Command_vim.html">
+            
+                <a href="Linux_Command_vim.html">
+            
+                    
+                    Linux Command Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.93" data-path="Linux_Command_vmstat.html">
+            
+                <a href="Linux_Command_vmstat.html">
+            
+                    
+                    Linux Command Vmstat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.94" data-path="Linux_Command_who.html">
+            
+                <a href="Linux_Command_who.html">
+            
+                    
+                    Linux Command Who
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.95" data-path="Linux_Command_wrk.html">
+            
+                <a href="Linux_Command_wrk.html">
+            
+                    
+                    Linux Command Wrk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.96" data-path="Linux_Command_xargs.html">
+            
+                <a href="Linux_Command_xargs.html">
+            
+                    
+                    Linux Command Xargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.97" data-path="Linux_Command_zip.html">
+            
+                <a href="Linux_Command_zip.html">
+            
+                    
+                    Linux Command Zip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.98" data-path="Linux-Command_Printf.html">
+            
+                <a href="Linux-Command_Printf.html">
+            
+                    
+                    Linux Command Printf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../About.html">
+            
+                <a href="../About.html">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Overview.html">
+            
+                <a href="../Overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../tags.html">
+            
+                <a href="../tags.html">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Linux Command Perf</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#linux-command-perf-&#x6027;&#x80FD;&#x5256;&#x6790;"><b></b>Linux Command Perf &#x6027;&#x80FD;&#x5256;&#x6790;</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x7B80;&#x4ECB;"><b></b>1. &#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#2-&#x65B9;&#x6CD5;"><b></b>2. &#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#21-perf-list"><b></b>2.1 perf-list</a></li><li><span class="title-icon "></span><a href="#22-perf-top"><b></b>2.2 perf-top</a></li><li><span class="title-icon "></span><a href="#23-perf-stat"><b></b>2.3 perf-stat</a></li><li><span class="title-icon "></span><a href="#24-perf-record"><b></b>2.4 perf-record</a></li><li><span class="title-icon "></span><a href="#25-perf-report"><b></b>2.5 perf-report</a></li><li><span class="title-icon "></span><a href="#26-perf-lock"><b></b>2.6 perf-lock</a></li><li><span class="title-icon "></span><a href="#27-perf-trace"><b></b>2.7 perf trace</a></li></ul></ul></ul></div><a href="#linux-command-perf-&#x6027;&#x80FD;&#x5256;&#x6790;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="linux-command-perf-&#x6027;&#x80FD;&#x5256;&#x6790;"><a name="linux-command-perf-&#x6027;&#x80FD;&#x5256;&#x6790;" class="anchor-navigation-ex-anchor" href="#linux-command-perf-&#x6027;&#x80FD;&#x5256;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>Linux Command Perf &#x6027;&#x80FD;&#x5256;&#x6790;</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../tags.html#&#x5206;&#x6790;">&#x5206;&#x6790;</a> <a href="../tags.html#&#x6027;&#x80FD;">&#x6027;&#x80FD;</a></p></div><!-- tagsstop --><h2 id="1-&#x7B80;&#x4ECB;"><a name="1-&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#1-&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B80;&#x4ECB;</h2>
+<p>&#x4ECE;2.6.31&#x5185;&#x6838;&#x5F00;&#x59CB;&#xFF0C;Linux&#x5185;&#x6838;&#x81EA;&#x5E26;&#x4E86;&#x4E00;&#x4E2A;&#x6027;&#x80FD;&#x5206;&#x6790;&#x5DE5;&#x5177;perf&#xFF0C;&#x80FD;&#x591F;&#x8FDB;&#x884C;&#x51FD;&#x6570;&#x7EA7;&#x4E0E;&#x6307;&#x4EE4;&#x7EA7;&#x7684;&#x70ED;&#x70B9;&#x67E5;&#x627E;&#x3002;&#x901A;&#x8FC7;&#x5B83;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5229;&#x7528; PMU&#xFF0C;tracepoint &#x548C;&#x5185;&#x6838;&#x4E2D;&#x7684;&#x7279;&#x6B8A;&#x8BA1;&#x6570;&#x5668;&#x6765;&#x8FDB;&#x884C;&#x6027;&#x80FD;&#x7EDF;&#x8BA1;&#x3002;&#x5B83;&#x4E0D;&#x4F46;&#x53EF;&#x4EE5;&#x5206;&#x6790;&#x6307;&#x5B9A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898; (per thread)&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5206;&#x6790;&#x5185;&#x6838;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5206;&#x6790;&#x5E94;&#x7528;&#x4EE3;&#x7801;&#x548C;&#x5185;&#x6838;&#xFF0C;&#x4ECE;&#x800C;&#x5168;&#x9762;&#x7406;&#x89E3;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x3002;</p>
+<p>Perf&#x662F;&#x5185;&#x7F6E;&#x4E8E;Linux&#x5185;&#x6838;&#x6E90;&#x7801;&#x6811;&#x4E2D;&#x7684;&#x6027;&#x80FD;&#x5256;&#x6790;(profiling)&#x5DE5;&#x5177;&#x3002;
+&#x5B83;&#x57FA;&#x4E8E;<strong>&#x4E8B;&#x4EF6;</strong>&#x91C7;&#x6837;&#x539F;&#x7406;&#xFF0C;&#x4EE5;<strong>&#x6027;&#x80FD;&#x4E8B;&#x4EF6;</strong>&#x4E3A;&#x57FA;&#x7840;&#xFF0C;&#x652F;&#x6301;&#x9488;&#x5BF9;&#x5904;&#x7406;&#x5668;&#x76F8;&#x5173;&#x6027;&#x80FD;&#x6307;&#x6807;&#x4E0E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x6027;&#x80FD;&#x6307;&#x6807;&#x7684;&#x6027;&#x80FD;&#x5256;&#x6790;&#x3002;</p>
+<p>&#x5E38;&#x7528;&#x4E8E;&#x6027;&#x80FD;&#x74F6;&#x9888;&#x7684;&#x67E5;&#x627E;&#x4E0E;&#x70ED;&#x70B9;&#x4EE3;&#x7801;&#x7684;&#x5B9A;&#x4F4D;&#x3002;</p>
+<p><strong>CPU&#x5468;&#x671F;</strong>(cpu-cycles)&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#xFF0C;&#x6240;&#x8C13;&#x7684;CPU&#x5468;&#x671F;&#x662F;&#x6307;CPU&#x6240;&#x80FD;&#x8BC6;&#x522B;&#x7684;&#x6700;&#x5C0F;&#x65F6;&#x95F4;&#x5355;&#x5143;&#xFF0C;&#x901A;&#x5E38;&#x4E3A;&#x4EBF;&#x5206;&#x4E4B;&#x51E0;&#x79D2;&#xFF0C;&#x662F;CPU&#x6267;&#x884C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x6307;&#x4EE4;&#x65F6;&#x6240;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4F8B;&#x5982;&#x8BFB;&#x53D6;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E5F;&#x53EB;&#x505A;<code>clock tick</code>&#x3002;</p>
+<p>Perf&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;22&#x79CD;&#x5B50;&#x5DE5;&#x5177;&#x7684;&#x5DE5;&#x5177;&#x96C6;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;5&#x79CD;&#xFF1A;</p>
+<ul>
+<li>perf-list</li>
+<li>perf-stat</li>
+<li>perf-top</li>
+<li>perf-record</li>
+<li>perf-report</li>
+<li>perf-trace</li>
+</ul>
+<h2 id="2-&#x65B9;&#x6CD5;"><a name="2-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#2-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x65B9;&#x6CD5;</h2>
+<h3 id="21-perf-list"><a name="21-perf-list" class="anchor-navigation-ex-anchor" href="#21-perf-list"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 perf-list</h3>
+<p> Perf-list&#x7528;&#x6765;&#x67E5;&#x770B;perf&#x6240;&#x652F;&#x6301;&#x7684;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#xFF0C;&#x6709;&#x8F6F;&#x4EF6;&#x7684;&#x4E5F;&#x6709;&#x786C;&#x4EF6;&#x7684;&#x3002;
+List all symbolic event types.</p>
+<pre class="language-"><code class="lang-bash">perf list <span class="token punctuation">[</span>hw <span class="token operator">|</span> sw <span class="token operator">|</span> cache <span class="token operator">|</span> tracepoint <span class="token operator">|</span> event_glob<span class="token punctuation">]</span>
+</code></pre>
+<h4 id="211-&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x7684;&#x5206;&#x5E03;"><a name="211-&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x7684;&#x5206;&#x5E03;" class="anchor-navigation-ex-anchor" href="#211-&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x7684;&#x5206;&#x5E03;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.1 &#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x7684;&#x5206;&#x5E03;</h4>
+<ul>
+<li>hw&#xFF1A;Hardware event&#xFF0C;9&#x4E2A;</li>
+<li>sw&#xFF1A;Software event&#xFF0C;9&#x4E2A;</li>
+<li>cache&#xFF1A;Hardware cache event&#xFF0C;26&#x4E2A;</li>
+<li>tracepoint&#xFF1A;Tracepoint event&#xFF0C;775&#x4E2A;</li>
+</ul>
+<p>sw&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5185;&#x6838;&#x7684;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x4E0E;&#x786C;&#x4EF6;&#x65E0;&#x5173;&#x3002;</p>
+<p>hw&#x548C;cache&#x662F;CPU&#x67B6;&#x6784;&#x76F8;&#x5173;&#x7684;&#xFF0C;&#x4F9D;&#x8D56;&#x4E8E;&#x5177;&#x4F53;&#x786C;&#x4EF6;&#x3002;</p>
+<p>tracepoint&#x662F;&#x57FA;&#x4E8E;&#x5185;&#x6838;&#x7684;ftrace&#xFF0C;&#x4E3B;&#x7EBF;2.6.3x&#x4EE5;&#x4E0A;&#x7684;&#x5185;&#x6838;&#x7248;&#x672C;&#x624D;&#x652F;&#x6301;&#x3002;</p>
+<h4 id="212-&#x6307;&#x5B9A;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x4EE5;&#x5B83;&#x7684;&#x5C5E;&#x6027;"><a name="212-&#x6307;&#x5B9A;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x4EE5;&#x5B83;&#x7684;&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#212-&#x6307;&#x5B9A;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x4EE5;&#x5B83;&#x7684;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.2 &#x6307;&#x5B9A;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;(&#x4EE5;&#x5B83;&#x7684;&#x5C5E;&#x6027;)</h4>
+<pre class="language-"><code class="lang-bash">-e <span class="token operator">&lt;</span>event<span class="token operator">&gt;</span> <span class="token builtin class-name">:</span> u // userspace
+
+-e <span class="token operator">&lt;</span>event<span class="token operator">&gt;</span> <span class="token builtin class-name">:</span> k // kernel
+
+-e <span class="token operator">&lt;</span>event<span class="token operator">&gt;</span> <span class="token builtin class-name">:</span> h // hypervisor
+
+-e <span class="token operator">&lt;</span>event<span class="token operator">&gt;</span> <span class="token builtin class-name">:</span> G // guest counting <span class="token punctuation">(</span>in KVM guests<span class="token punctuation">)</span>
+
+-e <span class="token operator">&lt;</span>event<span class="token operator">&gt;</span> <span class="token builtin class-name">:</span> H // <span class="token function">host</span> counting <span class="token punctuation">(</span>not <span class="token keyword">in</span> KVM guests<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="213-&#x5B9E;&#x4F8B;"><a name="213-&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#213-&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.3 &#x5B9E;&#x4F8B;</h4>
+<p>&#x663E;&#x793A;&#x5185;&#x6838;&#x548C;&#x6A21;&#x5757;&#x4E2D;&#xFF0C;&#x6D88;&#x8017;&#x6700;&#x591A;CPU&#x5468;&#x671F;&#x7684;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ perf <span class="token function">top</span> -e cycles:k
+</code></pre>
+<p>&#x663E;&#x793A;&#x5206;&#x914D;&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x6700;&#x591A;&#x7684;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ perf <span class="token function">top</span> -e kmem:kmem_cache_alloc
+</code></pre>
+<h3 id="22-perf-top"><a name="22-perf-top" class="anchor-navigation-ex-anchor" href="#22-perf-top"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 perf-top</h3>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;(&#x9ED8;&#x8BA4;&#x662F;CPU&#x5468;&#x671F;)&#xFF0C;&#x663E;&#x793A;&#x6D88;&#x8017;&#x6700;&#x591A;&#x7684;&#x51FD;&#x6570;&#x6216;&#x6307;&#x4EE4;&#x3002;</p>
+<p>System profiling tool.</p>
+<p>Generates and displays a performance counter profile in real time.</p>
+<pre class="language-"><code class="lang-bash">perf <span class="token function">top</span> <span class="token punctuation">[</span>-e <span class="token operator">&lt;</span>EVENT<span class="token operator">&gt;</span> <span class="token operator">|</span> --event<span class="token operator">=</span>EVENT<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>options<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+</code></pre>
+<p>perf top&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x5206;&#x6790;&#x5404;&#x4E2A;&#x51FD;&#x6570;&#x5728;&#x67D0;&#x4E2A;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x4E0A;&#x7684;&#x70ED;&#x5EA6;&#xFF0C;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x7684;&#x5B9A;&#x4F4D;&#x70ED;&#x70B9;&#x51FD;&#x6570;&#xFF0C;&#x5305;&#x62EC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x51FD;&#x6570;&#x3001;</p>
+<p>&#x6A21;&#x5757;&#x51FD;&#x6570;&#x4E0E;&#x5185;&#x6838;&#x51FD;&#x6570;&#xFF0C;&#x751A;&#x81F3;&#x80FD;&#x591F;&#x5B9A;&#x4F4D;&#x5230;&#x70ED;&#x70B9;&#x6307;&#x4EE4;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x4E3A;cpu cycles&#x3002;</p>
+<h4 id="222-&#x8F93;&#x51FA;&#x683C;&#x5F0F;"><a name="222-&#x8F93;&#x51FA;&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#222-&#x8F93;&#x51FA;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.2 &#x8F93;&#x51FA;&#x683C;&#x5F0F;</h4>
+<p>perf top
+<a href="https://img-blog.csdnimg.cn/20201029111526560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center" data-lightbox="905b754a-ed44-4769-804b-46b7c99cec9d" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://img-blog.csdnimg.cn/20201029111526560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x5217;&#xFF1A;&#x7B26;&#x53F7;&#x5F15;&#x53D1;&#x7684;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x6307;&#x5360;&#x7528;&#x7684;cpu&#x5468;&#x671F;&#x6BD4;&#x4F8B;&#x3002;</li>
+<li>&#x7B2C;&#x4E8C;&#x5217;&#xFF1A;&#x7B26;&#x53F7;&#x6240;&#x5728;&#x7684;DSO(Dynamic Shared Object)&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3001;&#x5185;&#x6838;&#x3001;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x3001;&#x6A21;&#x5757;&#x3002;</li>
+<li>&#x7B2C;&#x4E09;&#x5217;&#xFF1A;DSO&#x7684;&#x7C7B;&#x578B;&#x3002;[.]&#x8868;&#x793A;&#x6B64;&#x7B26;&#x53F7;&#x5C5E;&#x4E8E;&#x7528;&#x6237;&#x6001;&#x7684;ELF&#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4E0E;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#xFF0C;[k]&#x8868;&#x8FF0;&#x6B64;&#x7B26;&#x53F7;&#x5C5E;&#x4E8E;&#x5185;&#x6838;&#x6216;&#x6A21;&#x5757;&#x3002;</li>
+<li>&#x7B2C;&#x56DB;&#x5217;&#xFF1A;&#x7B26;&#x53F7;&#x540D;&#x3002;&#x6709;&#x4E9B;&#x7B26;&#x53F7;&#x4E0D;&#x80FD;&#x89E3;&#x6790;&#x4E3A;&#x51FD;&#x6570;&#x540D;&#xFF0C;&#x53EA;&#x80FD;&#x7528;&#x5730;&#x5740;&#x8868;&#x793A;&#x3002;</li>
+</ul>
+<h4 id="223-&#x4EA4;&#x4E92;&#x547D;&#x4EE4;"><a name="223-&#x4EA4;&#x4E92;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#223-&#x4EA4;&#x4E92;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.3 &#x4EA4;&#x4E92;&#x547D;&#x4EE4;</h4>
+<pre class="language-"><code class="lang-bash">h&#xFF1A;&#x663E;&#x793A;&#x5E2E;&#x52A9;
+
+UP/DOWN/PGUP/PGDN/SPACE&#xFF1A;&#x4E0A;&#x4E0B;&#x548C;&#x7FFB;&#x9875;&#x3002;
+
+a&#xFF1A;annotate current symbol&#xFF0C;&#x6CE8;&#x89E3;&#x5F53;&#x524D;&#x7B26;&#x53F7;&#x3002;&#x80FD;&#x591F;&#x7ED9;&#x51FA;&#x6C47;&#x7F16;&#x8BED;&#x8A00;&#x7684;&#x6CE8;&#x89E3;&#xFF0C;&#x7ED9;&#x51FA;&#x5404;&#x6761;&#x6307;&#x4EE4;&#x7684;&#x91C7;&#x6837;&#x7387;&#x3002;
+
+d&#xFF1A;&#x8FC7;&#x6EE4;&#x6389;&#x6240;&#x6709;&#x4E0D;&#x5C5E;&#x4E8E;&#x6B64;DSO&#x7684;&#x7B26;&#x53F7;&#x3002;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x67E5;&#x770B;&#x540C;&#x4E00;&#x7C7B;&#x522B;&#x7684;&#x7B26;&#x53F7;&#x3002;
+
+P&#xFF1A;&#x5C06;&#x5F53;&#x524D;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;perf.hist.N&#x4E2D;&#x3002;
+</code></pre>
+<h4 id="224-&#x53C2;&#x6570;"><a name="224-&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#224-&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.4 &#x53C2;&#x6570;</h4>
+<ul>
+<li>-e <event>&#xFF1A;&#x6307;&#x660E;&#x8981;&#x5206;&#x6790;&#x7684;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x3002;</event></li>
+<li>-p <pid>&#xFF1A;Profile events on existing Process ID (comma sperated list). &#x4EC5;&#x5206;&#x6790;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x53CA;&#x5176;&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7A0B;&#x3002;</pid></li>
+<li>-k <path></path>&#xFF1A;Path to vmlinux. Required for annotation functionality. &#x5E26;&#x7B26;&#x53F7;&#x8868;&#x7684;&#x5185;&#x6838;&#x6620;&#x50CF;&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#x3002;</li>
+<li>-K&#xFF1A;&#x4E0D;&#x663E;&#x793A;&#x5C5E;&#x4E8E;&#x5185;&#x6838;&#x6216;&#x6A21;&#x5757;&#x7684;&#x7B26;&#x53F7;&#x3002;</li>
+<li>-U&#xFF1A;&#x4E0D;&#x663E;&#x793A;&#x5C5E;&#x4E8E;&#x7528;&#x6237;&#x6001;&#x7A0B;&#x5E8F;&#x7684;&#x7B26;&#x53F7;&#x3002;</li>
+<li>-d <n>&#xFF1A;&#x754C;&#x9762;&#x7684;&#x5237;&#x65B0;&#x5468;&#x671F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;2s&#xFF0C;&#x56E0;&#x4E3A;perf top&#x9ED8;&#x8BA4;&#x6BCF;2s&#x4ECE;mmap&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x8BFB;&#x53D6;&#x4E00;&#x6B21;&#x6027;&#x80FD;&#x6570;&#x636E;&#x3002;</n></li>
+<li>-G&#xFF1A;&#x5F97;&#x5230;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x5173;&#x7CFB;&#x56FE;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">perf <span class="token function">top</span> -G <span class="token punctuation">[</span>fractal<span class="token punctuation">]</span>&#xFF0C;&#x8DEF;&#x5F84;&#x6982;&#x7387;&#x4E3A;&#x76F8;&#x5BF9;&#x503C;&#xFF0C;&#x52A0;&#x8D77;&#x6765;&#x4E3A;100%&#xFF0C;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x4E3A;&#x4ECE;&#x4E0B;&#x5F80;&#x4E0A;&#x3002;
+
+perf <span class="token function">top</span> -G graph&#xFF0C;&#x8DEF;&#x5F84;&#x6982;&#x7387;&#x4E3A;&#x7EDD;&#x5BF9;&#x503C;&#xFF0C;&#x52A0;&#x8D77;&#x6765;&#x4E3A;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x70ED;&#x5EA6;&#x3002;
+</code></pre>
+<h4 id="225-&#x5B9E;&#x4F8B;"><a name="225-&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#225-&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.5 &#x5B9E;&#x4F8B;</h4>
+<pre class="language-"><code class="lang-bash">$ perf <span class="token function">top</span> // &#x9ED8;&#x8BA4;&#x914D;&#x7F6E;
+
+$ perf <span class="token function">top</span> -G // &#x5F97;&#x5230;&#x8C03;&#x7528;&#x5173;&#x7CFB;&#x56FE;
+
+$ perf <span class="token function">top</span> -e cycles // &#x6307;&#x5B9A;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;
+
+$ perf <span class="token function">top</span> -p <span class="token number">23015,32476</span> // &#x67E5;&#x770B;&#x8FD9;&#x4E24;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;cpu cycles&#x4F7F;&#x7528;&#x60C5;&#x51B5;
+
+$ perf <span class="token function">top</span> -s comm,pid,symbol // &#x663E;&#x793A;&#x8C03;&#x7528;symbol&#x7684;&#x8FDB;&#x7A0B;&#x540D;&#x548C;&#x8FDB;&#x7A0B;&#x53F7;
+
+$ perf <span class="token function">top</span> --comms nginx,top // &#x4EC5;&#x663E;&#x793A;&#x5C5E;&#x4E8E;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x7684;&#x7B26;&#x53F7;
+
+$ perf <span class="token function">top</span> --symbols kfree // &#x4EC5;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7684;&#x7B26;&#x53F7;
+</code></pre>
+<h3 id="23-perf-stat"><a name="23-perf-stat" class="anchor-navigation-ex-anchor" href="#23-perf-stat"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 perf-stat</h3>
+<p>&#x7528;&#x4E8E;&#x5206;&#x6790;&#x6307;&#x5B9A;&#x7A0B;&#x5E8F;&#x7684;&#x6027;&#x80FD;&#x6982;&#x51B5;&#x3002;</p>
+<p> Run a command and gather performance counter statistics.</p>
+<pre class="language-"><code class="lang-bash">perf <span class="token function">stat</span> <span class="token punctuation">[</span>-e <span class="token operator">&lt;</span>EVENT<span class="token operator">&gt;</span> <span class="token operator">|</span> --event<span class="token operator">=</span>EVENT<span class="token punctuation">]</span> <span class="token punctuation">[</span>-a<span class="token punctuation">]</span> <span class="token operator">&lt;</span>command<span class="token operator">&gt;</span>
+
+perf <span class="token function">stat</span> <span class="token punctuation">[</span>-e <span class="token operator">&lt;</span>EVENT<span class="token operator">&gt;</span> <span class="token operator">|</span> --event<span class="token operator">=</span>EVENT<span class="token punctuation">]</span> <span class="token punctuation">[</span>-a<span class="token punctuation">]</span> - <span class="token operator">&lt;</span>command<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>options<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+</code></pre>
+<h4 id="231-&#x8F93;&#x51FA;&#x683C;&#x5F0F;"><a name="231-&#x8F93;&#x51FA;&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#231-&#x8F93;&#x51FA;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.1 &#x8F93;&#x51FA;&#x683C;&#x5F0F;</h4>
+<pre class="language-"><code class="lang-bash">$ perf <span class="token function">stat</span> <span class="token function">ls</span>
+bin   dev           elasticsearch-7.2.0-linux-x86_64.tar.gz  elasticsearch-7.9.3_2             etc   kibana-7.9.3-linux-x86_64         lib    media  opt     root  sbin  sys  usr
+boot  elasticsearch-7.2.0  elasticsearch-7.9.3                elasticsearch-7.9.3-linux-x86_64.tar.gz  home  kibana-7.9.3-linux-x86_64.tar.gz  lib64  mnt    proc  run   srv   tmp  var
+
+ Performance counter stats <span class="token keyword">for</span> <span class="token string">&apos;ls&apos;</span><span class="token builtin class-name">:</span>
+
+              <span class="token number">1.20</span> msec task-clock                <span class="token comment">#    0.592 CPUs utilized          </span>
+                 <span class="token number">0</span>      context-switches          <span class="token comment">#    0.000 K/sec                  </span>
+                 <span class="token number">0</span>      cpu-migrations            <span class="token comment">#    0.000 K/sec                  </span>
+               <span class="token number">270</span>      page-faults               <span class="token comment">#    0.225 M/sec                  </span>
+   <span class="token operator">&lt;</span>not supported<span class="token operator">&gt;</span>      cycles                                                      
+   <span class="token operator">&lt;</span>not supported<span class="token operator">&gt;</span>      instructions                                                
+   <span class="token operator">&lt;</span>not supported<span class="token operator">&gt;</span>      branches                                                    
+   <span class="token operator">&lt;</span>not supported<span class="token operator">&gt;</span>      branch-misses                                               
+
+       <span class="token number">0.002023278</span> seconds <span class="token function">time</span> elapsed
+
+       <span class="token number">0.000000000</span> seconds user
+       <span class="token number">0.001984000</span> seconds sys
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x5305;&#x62EC;ls&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x53CA;10&#x4E2A;&#x6027;&#x80FD;&#x4E8B;&#x4EF6;&#x7684;&#x7EDF;&#x8BA1;&#x3002;</p>
+<ul>
+<li><code>task-clock</code>&#xFF1A;&#x4EFB;&#x52A1;&#x771F;&#x6B63;&#x5360;&#x7528;&#x7684;&#x5904;&#x7406;&#x5668;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;ms&#x3002;CPUs utilized = task-clock / time
+elapsed&#xFF0C;CPU&#x7684;&#x5360;&#x7528;&#x7387;&#x3002;</li>
+<li><code>context-switches</code>&#xFF1A;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x5207;&#x6362;&#x6B21;&#x6570;&#x3002;</li>
+<li><code>CPU-migrations</code>&#xFF1A;&#x5904;&#x7406;&#x5668;&#x8FC1;&#x79FB;&#x6B21;&#x6570;&#x3002;Linux&#x4E3A;&#x4E86;&#x7EF4;&#x6301;&#x591A;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF0C;&#x5728;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#x4E0B;&#x4F1A;&#x5C06;&#x67D0;&#x4E2A;&#x4EFB;&#x52A1;&#x4ECE;&#x4E00;&#x4E2A;CPU&#x8FC1;&#x79FB;&#x5230;&#x53E6;&#x4E00;&#x4E2A;CPU&#x3002;</li>
+<li><code>page-faults</code>&#xFF1A;&#x7F3A;&#x9875;&#x5F02;&#x5E38;&#x7684;&#x6B21;&#x6570;&#x3002;&#x5F53;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8BF7;&#x6C42;&#x7684;&#x9875;&#x9762;&#x5C1A;&#x672A;&#x5EFA;&#x7ACB;&#x3001;&#x8BF7;&#x6C42;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x6216;&#x8005;&#x8BF7;&#x6C42;&#x7684;&#x9875;&#x9762;&#x867D;&#x7136;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x4F46;&#x7269;&#x7406;&#x5730;&#x5740;&#x548C;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x5C1A;&#x672A;&#x5EFA;&#x7ACB;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#x4E00;&#x6B21;&#x7F3A;&#x9875;&#x5F02;&#x5E38;&#x3002;&#x53E6;&#x5916;TLB&#x4E0D;&#x547D;&#x4E2D;&#xFF0C;&#x9875;&#x9762;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x4E0D;&#x5339;&#x914D;&#x7B49;&#x60C5;&#x51B5;&#x4E5F;&#x4F1A;&#x89E6;&#x53D1;&#x7F3A;&#x9875;&#x5F02;&#x5E38;&#x3002;</li>
+<li><code>cycles</code>&#xFF1A;&#x6D88;&#x8017;&#x7684;&#x5904;&#x7406;&#x5668;&#x5468;&#x671F;&#x6570;&#x3002;&#x5982;&#x679C;&#x628A;&#x88AB;ls&#x4F7F;&#x7528;&#x7684;cpu cycles&#x770B;&#x6210;&#x662F;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x5668;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x7684;&#x4E3B;&#x9891;&#x4E3A;2.486GHz&#x3002;&#x53EF;&#x4EE5;&#x7528;cycles / task-clock&#x7B97;&#x51FA;&#x3002;</li>
+<li>stalled-cycles-frontend&#xFF1A;&#x7565;&#x8FC7;&#x3002;</li>
+<li>stalled-cycles-backend&#xFF1A;&#x7565;&#x8FC7;&#x3002;</li>
+<li><code>instructions</code>&#xFF1A;&#x6267;&#x884C;&#x4E86;&#x591A;&#x5C11;&#x6761;&#x6307;&#x4EE4;&#x3002;IPC&#x4E3A;&#x5E73;&#x5747;&#x6BCF;&#x4E2A;cpu cycle&#x6267;&#x884C;&#x4E86;&#x591A;&#x5C11;&#x6761;&#x6307;&#x4EE4;&#x3002;</li>
+<li><code>branches</code>&#xFF1A;&#x9047;&#x5230;&#x7684;&#x5206;&#x652F;&#x6307;&#x4EE4;&#x6570;&#x3002;branch-misses&#x662F;&#x9884;&#x6D4B;&#x9519;&#x8BEF;&#x7684;&#x5206;&#x652F;&#x6307;&#x4EE4;&#x6570;&#x3002;</li>
+</ul>
+<h4 id="232-&#x53C2;&#x6570;"><a name="232-&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#232-&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.2 &#x53C2;&#x6570;</h4>
+<pre class="language-"><code class="lang-bash">-p&#xFF1A;stat events on existing process <span class="token function">id</span> <span class="token punctuation">(</span>comma separated list<span class="token punctuation">)</span>. &#x4EC5;&#x5206;&#x6790;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x53CA;&#x5176;&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7A0B;&#x3002;
+
+-a&#xFF1A;system-wide collection from all CPUs. &#x4ECE;&#x6240;&#x6709;CPU&#x4E0A;&#x6536;&#x96C6;&#x6027;&#x80FD;&#x6570;&#x636E;&#x3002;
+
+-r&#xFF1A;repeat <span class="token builtin class-name">command</span> and print average + stddev <span class="token punctuation">(</span>max: <span class="token number">100</span><span class="token punctuation">)</span>. &#x91CD;&#x590D;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x6C42;&#x5E73;&#x5747;&#x3002;
+
+-C&#xFF1A;Count only on the list of CPUs provided <span class="token punctuation">(</span>comma separated list<span class="token punctuation">)</span>, &#x4ECE;&#x6307;&#x5B9A;CPU&#x4E0A;&#x6536;&#x96C6;&#x6027;&#x80FD;&#x6570;&#x636E;&#x3002;
+
+-v&#xFF1A;be <span class="token function">more</span> verbose <span class="token punctuation">(</span>show counter <span class="token function">open</span> errors, etc<span class="token punctuation">)</span>, &#x663E;&#x793A;&#x66F4;&#x591A;&#x6027;&#x80FD;&#x6570;&#x636E;&#x3002;
+
+-n&#xFF1A;null run - don&apos;t start any counters&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x4EFB;&#x52A1;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4; &#x3002;
+
+-x SEP&#xFF1A;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x5217;&#x7684;&#x5206;&#x9694;&#x7B26;&#x3002;
+
+-o file&#xFF1A;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#xFF0C;--append&#x6307;&#x5B9A;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x3002;
+
+--pre <span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span>&#xFF1A;&#x6267;&#x884C;&#x76EE;&#x6807;&#x7A0B;&#x5E8F;&#x524D;&#x5148;&#x6267;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x3002;
+
+--post <span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span>&#xFF1A;&#x6267;&#x884C;&#x76EE;&#x6807;&#x7A0B;&#x5E8F;&#x540E;&#x518D;&#x6267;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x3002;
+</code></pre>
+<h4 id="3-&#x4F7F;&#x7528;&#x4F8B;&#x5B50;"><a name="3-&#x4F7F;&#x7528;&#x4F8B;&#x5B50;" class="anchor-navigation-ex-anchor" href="#3-&#x4F7F;&#x7528;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>(3) &#x4F7F;&#x7528;&#x4F8B;&#x5B50;</h4>
+<pre class="language-"><code class="lang-bash">&#x6267;&#x884C;10&#x6B21;&#x7A0B;&#x5E8F;&#xFF0C;&#x7ED9;&#x51FA;&#x6807;&#x51C6;&#x504F;&#x5DEE;&#x4E0E;&#x671F;&#x671B;&#x7684;&#x6BD4;&#x503C;&#xFF1A;
+
+<span class="token comment"># perf stat -r 10 ls &gt; /dev/null</span>
+
+&#x663E;&#x793A;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;&#xFF1A;
+
+<span class="token comment"># perf stat -v ls &gt; /dev/null</span>
+
+&#x53EA;&#x663E;&#x793A;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x663E;&#x793A;&#x6027;&#x80FD;&#x8BA1;&#x6570;&#x5668;&#xFF1A;
+
+<span class="token comment"># perf stat -n ls &gt; /dev/null</span>
+
+&#x5355;&#x72EC;&#x7ED9;&#x51FA;&#x6BCF;&#x4E2A;CPU&#x4E0A;&#x7684;&#x4FE1;&#x606F;&#xFF1A;
+
+<span class="token comment"># perf stat -a -A ls &gt; /dev/null</span>
+
+ls&#x547D;&#x4EE4;&#x6267;&#x884C;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF1A;
+
+<span class="token comment"># perf stat -e syscalls:sys_enter ls</span>
+</code></pre>
+<h3 id="24-perf-record"><a name="24-perf-record" class="anchor-navigation-ex-anchor" href="#24-perf-record"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 perf-record</h3>
+<p>&#x6536;&#x96C6;&#x91C7;&#x6837;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8BB0;&#x5F55;&#x5728;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p>&#x968F;&#x540E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5176;&#x5B83;&#x5DE5;&#x5177;(perf-report)&#x5BF9;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x7ED3;&#x679C;&#x7C7B;&#x4F3C;&#x4E8E;perf-top&#x7684;&#x3002;</p>
+<h4 id="241-&#x53C2;&#x6570;"><a name="241-&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#241-&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4.1 &#x53C2;&#x6570;</h4>
+<ul>
+<li>-e&#xFF1A;Select the PMU event.</li>
+<li>-a&#xFF1A;System-wide collection from all CPUs.</li>
+<li>-p&#xFF1A;Record events on existing process ID (comma separated list).</li>
+<li>-A&#xFF1A;Append to the output file to do incremental profiling.</li>
+<li>-f&#xFF1A;Overwrite existing data file.</li>
+<li>-o&#xFF1A;Output file name.</li>
+<li>-g&#xFF1A;Do call-graph (stack chain/backtrace) recording.</li>
+<li>-C&#xFF1A;Collect samples only on the list of CPUs provided.</li>
+</ul>
+<h4 id="242-&#x5B9E;&#x4F8B;"><a name="242-&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#242-&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4.2 &#x5B9E;&#x4F8B;</h4>
+<p>&#x8BB0;&#x5F55;nginx&#x8FDB;&#x7A0B;&#x7684;&#x6027;&#x80FD;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ perf record -p <span class="token variable"><span class="token variable">`</span>pgrep -d <span class="token string">&apos;,&apos;</span> nginx<span class="token variable">`</span></span>
+</code></pre>
+<p>&#x8BB0;&#x5F55;&#x6267;&#x884C;ls&#x65F6;&#x7684;&#x6027;&#x80FD;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ perf record <span class="token function">ls</span> -g
+</code></pre>
+<p>&#x8BB0;&#x5F55;&#x6267;&#x884C;ls&#x65F6;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x54EA;&#x4E9B;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6700;&#x9891;&#x7E41;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ perf record -e syscalls:sys_enter <span class="token function">ls</span>
+</code></pre>
+<h3 id="25-perf-report"><a name="25-perf-report" class="anchor-navigation-ex-anchor" href="#25-perf-report"><i class="fa fa-link" aria-hidden="true"></i></a>2.5 perf-report</h3>
+<p>&#x8BFB;&#x53D6;perf record&#x521B;&#x5EFA;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x7ED9;&#x51FA;&#x70ED;&#x70B9;&#x5206;&#x6790;&#x7ED3;&#x679C;&#x3002;</p>
+<h4 id="251-&#x53C2;&#x6570;"><a name="251-&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#251-&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5.1 &#x53C2;&#x6570;</h4>
+<pre class="language-"><code class="lang-bash">-i&#xFF1A;Input <span class="token function">file</span> name. <span class="token punctuation">(</span>default: perf.data<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="252-&#x5B9E;&#x4F8B;"><a name="252-&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#252-&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5.2 &#x5B9E;&#x4F8B;</h4>
+<pre class="language-"><code class="lang-bash">$ perf report -i perf.data.2
+</code></pre>
+<p>More
+&#x9664;&#x4E86;&#x4EE5;&#x4E0A;5&#x4E2A;&#x5E38;&#x7528;&#x5DE5;&#x5177;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x9002;&#x7528;&#x4E8E;&#x8F83;&#x7279;&#x6B8A;&#x573A;&#x666F;&#x7684;&#x5DE5;&#x5177;&#xFF0C; &#x6BD4;&#x5982;&#x5185;&#x6838;&#x9501;&#x3001;slab&#x5206;&#x914D;&#x5668;&#x3001;&#x8C03;&#x5EA6;&#x5668;&#xFF0C;</p>
+<p>&#x4E5F;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x63A2;&#x6D4B;&#x70B9;&#x3002;</p>
+<h3 id="26-perf-lock"><a name="26-perf-lock" class="anchor-navigation-ex-anchor" href="#26-perf-lock"><i class="fa fa-link" aria-hidden="true"></i></a>2.6 perf-lock</h3>
+<p>&#x5185;&#x6838;&#x9501;&#x7684;&#x6027;&#x80FD;&#x5206;&#x6790;&#x3002;</p>
+<p>Analyze lock events.</p>
+<pre class="language-"><code class="lang-bash">perf lock <span class="token punctuation">{</span>record <span class="token operator">|</span> report <span class="token operator">|</span> script <span class="token operator">|</span> info<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x9009;&#x9879;&#x7684;&#x652F;&#x6301;&#xFF1A;<code>CONFIG_LOCKDEP&#x3001;CONFIG_LOCK_STAT</code>&#x3002;</p>
+<p>CONFIG_LOCKDEP defines acquired and release events.</p>
+<p>CONFIG_LOCK_STAT defines contended and acquired lock events.</p>
+<h4 id="261-&#x53C2;&#x6570;"><a name="261-&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#261-&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.6.1 &#x53C2;&#x6570;</h4>
+<ul>
+<li>-i <file>&#xFF1A;&#x8F93;&#x5165;&#x6587;&#x4EF6;</file></li>
+<li>-k <value>&#xFF1A;sorting key&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;acquired&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x6309;contended&#x3001;wait_total&#x3001;wait_max&#x548C;wait_min&#x6765;&#x6392;&#x5E8F;&#x3002;</value></li>
+</ul>
+<h4 id="262-&#x5B9E;&#x4F8B;"><a name="262-&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#262-&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.6.2 &#x5B9E;&#x4F8B;</h4>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># perf lock record ls // &#x8BB0;&#x5F55;</span>
+
+<span class="token comment"># perf lock report // &#x62A5;&#x544A;</span>
+</code></pre>
+<h3 id="27-perf-trace"><a name="27-perf-trace" class="anchor-navigation-ex-anchor" href="#27-perf-trace"><i class="fa fa-link" aria-hidden="true"></i></a>2.7 perf trace</h3>
+<p> perf-trace - strace inspired tool</p>
+<h4 id="271-&#x6D4B;&#x8BD5;&#x573A;&#x666F;"><a name="271-&#x6D4B;&#x8BD5;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#271-&#x6D4B;&#x8BD5;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.7.1 &#x6D4B;&#x8BD5;&#x573A;&#x666F;</h4>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528; 4 &#x4E2A; IP&#xFF0C;&#x5176;&#x4E2D; 2 &#x4E2A;&#x4E3A;&#x5916;&#x90E8;&#x53EF;&#x8DEF;&#x7531;&#x7F51;&#x6BB5;&#xFF08;192.168&#xFF09;&#xFF1A;</p>
+<ul>
+<li>localhost&#xFF0C;IP 127.0.0.1</li>
+<li>&#x4E00;&#x4E2A;&#x5E72;&#x51C0;&#x7684;&#x5BB9;&#x5668;&#xFF0C;IP 172.17.0.2</li>
+<li>&#x6211;&#x7684;&#x624B;&#x673A;&#xFF0C;&#x901A;&#x8FC7; USB &#x8FDE;&#x63A5;&#xFF0C;IP 192.168.42.129</li>
+<li>&#x6211;&#x7684;&#x624B;&#x673A;&#xFF0C;&#x901A;&#x8FC7; WiFi &#x8FDE;&#x63A5;&#xFF0C;IP 192.168.43.1
+&#x8DDF;&#x8E2A; ping &#x5411; 172.17.0.2 &#x5BB9;&#x5668;&#x7684;&#x5305;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EA;&#x5173;&#x5FC3; net &#x4E8B;&#x4EF6;&#xFF0C;&#x5FFD;&#x7565;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x4FE1;&#x606F;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">sudo</span> perf trace --no-syscalls --event <span class="token string">&apos;net:*&apos;</span> <span class="token function">ping</span> <span class="token number">172.17</span>.0.2 -c1 <span class="token operator">&gt;</span> /dev/null
+     <span class="token number">0.000</span> net:net_dev_queue:dev<span class="token operator">=</span>docker0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span><span class="token punctuation">)</span>
+     <span class="token number">0.008</span> net:net_dev_start_xmit:dev<span class="token operator">=</span>docker0 <span class="token assign-left variable">queue_mapping</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700 <span class="token assign-left variable">vlan_tagged</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">vlan_proto</span><span class="token operator">=</span>0x0000 <span class="token assign-left variable">vlan_tci</span><span class="token operator">=</span>0x0000 <span class="token assign-left variable">protocol</span><span class="token operator">=</span>0x0800 <span class="token assign-left variable">ip_summed</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span> <span class="token assign-left variable">data_len</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">network_offset</span><span class="token operator">=</span><span class="token number">14</span> <span class="token assign-left variable">transport_offset_valid</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">transport_offset</span><span class="token operator">=</span><span class="token number">34</span> <span class="token assign-left variable">tx_flags</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_size</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_segs</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_type</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+     <span class="token number">0.014</span> net:net_dev_queue:dev<span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span><span class="token punctuation">)</span>
+     <span class="token number">0.016</span> net:net_dev_start_xmit:dev<span class="token operator">=</span>veth79215ff <span class="token assign-left variable">queue_mapping</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700 <span class="token assign-left variable">vlan_tagged</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">vlan_proto</span><span class="token operator">=</span>0x0000 <span class="token assign-left variable">vlan_tci</span><span class="token operator">=</span>0x0000 <span class="token assign-left variable">protocol</span><span class="token operator">=</span>0x0800 <span class="token assign-left variable">ip_summed</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span> <span class="token assign-left variable">data_len</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">network_offset</span><span class="token operator">=</span><span class="token number">14</span> <span class="token assign-left variable">transport_offset_valid</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">transport_offset</span><span class="token operator">=</span><span class="token number">34</span> <span class="token assign-left variable">tx_flags</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_size</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_segs</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_type</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+     <span class="token number">0.020</span> net:netif_rx:dev<span class="token operator">=</span>eth0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">84</span><span class="token punctuation">)</span>
+     <span class="token number">0.022</span> net:net_dev_xmit:dev<span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span> <span class="token assign-left variable">rc</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+     <span class="token number">0.024</span> net:net_dev_xmit:dev<span class="token operator">=</span>docker0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span> <span class="token assign-left variable">rc</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+     <span class="token number">0.027</span> net:netif_receive_skb:dev<span class="token operator">=</span>eth0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">84</span><span class="token punctuation">)</span>
+     <span class="token number">0.044</span> net:net_dev_queue:dev<span class="token operator">=</span>eth0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span><span class="token punctuation">)</span>
+     <span class="token number">0.046</span> net:net_dev_start_xmit:dev<span class="token operator">=</span>eth0 <span class="token assign-left variable">queue_mapping</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00 <span class="token assign-left variable">vlan_tagged</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">vlan_proto</span><span class="token operator">=</span>0x0000 <span class="token assign-left variable">vlan_tci</span><span class="token operator">=</span>0x0000 <span class="token assign-left variable">protocol</span><span class="token operator">=</span>0x0800 <span class="token assign-left variable">ip_summed</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span> <span class="token assign-left variable">data_len</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">network_offset</span><span class="token operator">=</span><span class="token number">14</span> <span class="token assign-left variable">transport_offset_valid</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">transport_offset</span><span class="token operator">=</span><span class="token number">34</span> <span class="token assign-left variable">tx_flags</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_size</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_segs</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_type</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+     <span class="token number">0.048</span> net:netif_rx:dev<span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">84</span><span class="token punctuation">)</span>
+     <span class="token number">0.050</span> net:net_dev_xmit:dev<span class="token operator">=</span>eth0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span> <span class="token assign-left variable">rc</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+     <span class="token number">0.053</span> net:netif_receive_skb:dev<span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">84</span><span class="token punctuation">)</span>
+     <span class="token number">0.060</span> net:netif_receive_skb_entry:dev<span class="token operator">=</span>docker0 <span class="token assign-left variable">napi_id</span><span class="token operator">=</span>0x3 <span class="token assign-left variable">queue_mapping</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00 <span class="token assign-left variable">vlan_tagged</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">vlan_proto</span><span class="token operator">=</span>0x0000 <span class="token assign-left variable">vlan_tci</span><span class="token operator">=</span>0x0000 <span class="token assign-left variable">protocol</span><span class="token operator">=</span>0x0800 <span class="token assign-left variable">ip_summed</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">hash</span><span class="token operator">=</span>0x00000000 <span class="token assign-left variable">l4_hash</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">84</span> <span class="token assign-left variable">data_len</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">truesize</span><span class="token operator">=</span><span class="token number">768</span> <span class="token assign-left variable">mac_header_valid</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">mac_header</span><span class="token operator">=</span>-14 <span class="token assign-left variable">nr_frags</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_size</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">gso_type</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+     <span class="token number">0.061</span> net:netif_receive_skb:dev<span class="token operator">=</span>docker0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">84</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x53EA;&#x4FDD;&#x7559;&#x4E8B;&#x4EF6;&#x540D;&#x548C; skbaddr&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x6E05;&#x6670;&#x5F88;&#x591A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">net_dev_queue           <span class="token assign-left variable">dev</span><span class="token operator">=</span>docker0     <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700
+net_dev_start_xmit      <span class="token assign-left variable">dev</span><span class="token operator">=</span>docker0     <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700
+net_dev_queue           <span class="token assign-left variable">dev</span><span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700
+net_dev_start_xmit      <span class="token assign-left variable">dev</span><span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700
+netif_rx                <span class="token assign-left variable">dev</span><span class="token operator">=</span>eth0        <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700
+net_dev_xmit            <span class="token assign-left variable">dev</span><span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700
+net_dev_xmit            <span class="token assign-left variable">dev</span><span class="token operator">=</span>docker0     <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700
+netif_receive_skb       <span class="token assign-left variable">dev</span><span class="token operator">=</span>eth0        <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988700
+
+net_dev_queue           <span class="token assign-left variable">dev</span><span class="token operator">=</span>eth0        <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00
+net_dev_start_xmit      <span class="token assign-left variable">dev</span><span class="token operator">=</span>eth0        <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00
+netif_rx                <span class="token assign-left variable">dev</span><span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00
+net_dev_xmit            <span class="token assign-left variable">dev</span><span class="token operator">=</span>eth0        <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00
+netif_receive_skb       <span class="token assign-left variable">dev</span><span class="token operator">=</span>veth79215ff <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00
+netif_receive_skb_entry <span class="token assign-left variable">dev</span><span class="token operator">=</span>docker0     <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00
+netif_receive_skb       <span class="token assign-left variable">dev</span><span class="token operator">=</span>docker0     <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff96d481988b00
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x9762;&#x6709;&#x5F88;&#x591A;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6CE8;&#x610F;&#xFF0C;skbaddr &#x5728;&#x4E2D;&#x95F4;&#x53D8;&#x4E86;&#xFF08;0xffff96d481988700 -&gt; 0xffff96d481988b00&#xFF09; &#x3002;&#x53D8;&#x7684;&#x8FD9;&#x91CC;&#xFF0C;&#x5C31;&#x662F;&#x751F;&#x6210;&#x4E86; ICMP echo reply &#x5305;&#xFF0C;&#x5E76;&#x4F5C;&#x4E3A;&#x5E94;&#x7B54;&#x5305;&#x53D1;&#x9001;&#x7684;&#x5730;&#x65B9;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x7684; &#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x4E2A;&#x5305;&#x7684; skbaddr &#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#xFF0C;&#x8BF4;&#x660E;&#x6CA1;&#x6709; copy&#x3002;copy &#x975E;&#x5E38;&#x8017;&#x65F6;&#x3002;</p>
+<p>&#x5176;&#x6B21;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6E05;&#x695A;&#x5730;&#x770B;&#x5230; packet &#x5728;&#x5185;&#x6838;&#x7684;&#x4F20;&#x8F93;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<ol>
+<li>docker0 &#x7F51;&#x6865;</li>
+<li>veth pair &#x7684;&#x5BBF;&#x4E3B;&#x673A;&#x7AEF;&#xFF08;veth79215ff)</li>
+<li>veth pair &#x7684;&#x5BB9;&#x5668;&#x7AEF;&#xFF08;&#x5BB9;&#x5668;&#x91CC;&#x7684; eth0&#xFF09;</li>
+<li>&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x76F8;&#x53CD;&#x7684;&#x8FD4;&#x56DE;&#x8DEF;&#x5F84;</li>
+</ol>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x8FD8;&#x6CA1;&#x6709;&#x770B;&#x5230;&#x7F51;&#x7EDC;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x4F46;&#x5DF2;&#x7ECF;&#x5F97;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x4E0D;&#x9519;&#x7684;&#x5168;&#x5C40;&#x89C6;&#x56FE;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4FE1;&#x606F;&#x6709;&#x4E9B;&#x6742;&#xFF0C;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x91CD;&#x590D;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x51E0;&#x4E2A;&#x6700;&#x5408;&#x9002;&#x7684;&#x8DDF;&#x8E2A;&#x70B9;&#xFF0C;&#x4F7F;&#x5F97;&#x8F93;&#x51FA;&#x770B;&#x8D77;&#x6765; &#x66F4;&#x6E05;&#x723D;&#x3002;&#x8981;&#x67E5;&#x770B;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x7F51;&#x7EDC;&#x8DDF;&#x8E2A;&#x70B9;&#xFF0C;&#x6267;&#x884C; perf list&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">sudo</span> perf list <span class="token string">&apos;net:*&apos;</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x5217;&#x51FA; tracepoint &#x5217;&#x8868;&#xFF0C;&#x540D;&#x5B57;&#x7C7B;&#x4F3C;&#x4E8E; net:netif_rx&#x3002;&#x5192;&#x53F7;&#x524D;&#x9762;&#x662F;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B; &#xFF0C;&#x540E;&#x9762;&#x662F;&#x4E8B;&#x4EF6;&#x540D;&#x5B57;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x9009;&#x62E9;&#x4E86; 4 &#x4E2A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">net_dev_queue
+
+netif_receive_skb_entry
+
+netif_rx
+
+napi_gro_receive_entry
+</code></pre>
+<p>&#x6548;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">sudo</span> perf trace --no-syscalls           <span class="token punctuation">\</span>
+    --event <span class="token string">&apos;net:net_dev_queue&apos;</span>           <span class="token punctuation">\</span>
+    --event <span class="token string">&apos;net:netif_receive_skb_entry&apos;</span> <span class="token punctuation">\</span>
+    --event <span class="token string">&apos;net:netif_rx&apos;</span>                <span class="token punctuation">\</span>
+    --event <span class="token string">&apos;net:napi_gro_receive_entry&apos;</span>  <span class="token punctuation">\</span>
+    <span class="token function">ping</span> <span class="token number">172.17</span>.0.2 -c1 <span class="token operator">&gt;</span> /dev/null
+       <span class="token number">0.000</span> net:net_dev_queue:dev<span class="token operator">=</span>docker0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff8e847720a900 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span><span class="token punctuation">)</span>
+       <span class="token number">0.010</span> net:net_dev_queue:dev<span class="token operator">=</span>veth7781d5c <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff8e847720a900 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span><span class="token punctuation">)</span>
+       <span class="token number">0.014</span> net:netif_rx:dev<span class="token operator">=</span>eth0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff8e847720a900 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">84</span><span class="token punctuation">)</span>
+       <span class="token number">0.034</span> net:net_dev_queue:dev<span class="token operator">=</span>eth0 <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff8e849cb8cd00 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">98</span><span class="token punctuation">)</span>
+       <span class="token number">0.036</span> net:netif_rx:dev<span class="token operator">=</span>veth7781d5c <span class="token assign-left variable">skbaddr</span><span class="token operator">=</span>0xffff8e849cb8cd00 <span class="token assign-left variable">len</span><span class="token operator">=</span><span class="token number">84</span><span class="token punctuation">)</span>
+       <span class="token number">0.045</span> net:netif_receive_skb_entry:dev<span class="token operator">=</span>docker0 <span class="token assign-left variable">napi_id</span><span class="token operator">=</span>0x1 <span class="token assign-left variable">queue_mapping</span><span class="token operator">=</span><span class="token number">0</span>
+</code></pre>
+<p>&#x66F4;&#x591A;&#x9605;&#x8BFB;&#xFF1A;</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=Mzg4MTQ0Njc1Mg==&amp;mid=2247483819&amp;idx=1&amp;sn=732cecd8f6e1124e961102028520afb5&amp;chksm=cf649ba4f81312b2cd2cd66e1be8ab15dbb19d938079444ef33a519e337df2f1d66d59e44ff4&amp;mpshare=1&amp;scene=1&amp;srcid=1026mSCHY4Ge5orfgcsuUbDC&amp;sharer_sharetime=1603846657216&amp;sharer_shareid=9e1d0f93025303e47ff2523f5ebf4078&amp;key=a1951d0dc6cf9d5d49fb8e2650421265f61f09847e8a4f8d3c6b654db6afa7f9dbed22690b48baa286aaa8b687e8dbb4758ec8a4926d2bf22f88be2eb733b3f50893128912c044ac49c0a9cdb17d1eccbc4425cf0fb07e5a23c359b82f1bdd5d47ae18b5833e4eeea11073d1427337bc963181f3983d9b79159a65294fff4741&amp;ascene=1&amp;uin=MjkwMDAzNTYzOQ==&amp;devicetype=Windows%2010%20x64&amp;version=6300002f&amp;lang=zh_CN&amp;exportkey=AWO%2b3iWAPiFG0qOuJvq7Hg0=&amp;pass_ticket=QzdoColbZmYyfslaclvmTdZpeLF2v/d5NLgjnYbRBHfwosE5vzwqUlup7bWleK3R&amp;wx_header=0" target="_blank">&#x4E91;&#x539F;&#x751F;&#x9886;&#x57DF;</a></li>
+<li><a href="https://www.brendangregg.com/perf.html" target="_blank">perf Examples</a></li>
+<li><a href="https://linuxhint.com/linux-perf-commands/" target="_blank">Linux Perf commands</a></li>
+<li><a href="https://man7.org/linux/man-pages/man1/perf.1.html" target="_blank">perf(1) &#x2014; Linux manual page</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/getting-started-with-perf_monitoring-and-managing-system-status-and-performance" target="_blank">Getting started with perf</a></li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ghostwritten &#x6D59;ICP&#x5907;2020032454&#x53F7; 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-06-23 17:16:20
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Linux_Command_passwd.html" class="navigation navigation-prev " aria-label="Previous page: Linux Command Passwd">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Linux_Command_pidstat.html" class="navigation navigation-next " aria-label="Next page: Linux Command Pidstat">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linux Command Perf","level":"1.2.52","depth":2,"next":{"title":"Linux Command Pidstat","level":"1.2.53","depth":2,"path":"Linux-Command/Linux_Command_pidstat.md","ref":"Linux-Command/Linux_Command_pidstat.md","articles":[]},"previous":{"title":"Linux Command Passwd","level":"1.2.51","depth":2,"path":"Linux-Command/Linux_Command_passwd.md","ref":"Linux-Command/Linux_Command_passwd.md","articles":[]},"dir":"ltr"},"config":{"plugins":["3-ba","accordion","advanced-emoji","anchor-navigation-ex","baidu-tongji","change_girls","custom-favicon","donate","chapter-fold","edit-link","flexible-alerts","github-buttons","github","lightbox","image-captions","insert-logo","musicxml","prism","prism-themes","pageview-count","-highlight","-search","-lunr","rss","search-plus","splitter","-sharing","sharing-plus","sidebar-style","theme-default","tags","tbfed-pagefooter"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"zongxun","title":"《Linux Command Docs》"},"tbfed-pagefooter":{"copyright":"Copyright &copy ghostwritten 浙ICP备2020032454号 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-holi-theme.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/Ghostwritten"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"change_girls":{"time":10,"urls":["https://images2.alphacoders.com/870/870886.jpg","https://images7.alphacoders.com/110/1104374.jpg","https://images.alphacoders.com/578/578306.jpg","https://images3.alphacoders.com/730/730144.jpg","https://images4.alphacoders.com/238/238066.jpg","https://images3.alphacoders.com/882/882548.jpg","https://images.alphacoders.com/101/10131.jpg","https://images7.alphacoders.com/976/976088.jpg"]},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"donate":{"alipay":"https://github.com/Ghostwritten/linux-command-docs/blob/gh-pages/assets/imgs/aplipay.png?raw=true","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://github.com/Ghostwritten/linux-command-docs/blob/gh-pages/assets/imgs/wechat.png?raw=true","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["linux-command"],"title":"Linux Command Docs","description":"This is the best book ever.","author":"Zong Xun","feed_url":"http://smoothies.com.cn/rss","site_url":"https://smoothies.com.cn/gitbook-docs/","managingEditor":"writer@smoothies.com.cn (Zong Xun)","webMaster":"webmaster@smoothies.com.cn (Zong Xun)"},"musicxml":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"assets/imgs/Blade_Runner_Rachel.ico","lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"prism-themes":{},"github-buttons":{"buttons":[{"user":"Ghostwritten","repo":"linux-command-docs","type":"star","count":true,"size":"small"}]},"custom-favicon":{},"tags":{"placement":"top"},"3-ba":{"configuration":"auto","token":"9ffc0dce8d7079aceab6b0bc18eb626b"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Danger"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper"],"douban":false,"facebook":false,"weibo":false,"twitter":false,"pocket":false,"google":false,"qzone":false},"edit-link":{"label":"Edit","base":"https://github.com/Ghostwritten/linux-command-docs/edit/master/"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://images3.alphacoders.com/730/730144.jpg"},"search-plus":{},"image-captions":{"caption":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"宗勋 - zongxun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"index.html#fig1.1.1","level":"1.1","list_caption":"Figure: Twitter: cnghostwritten","alt":"Twitter: cnghostwritten","nro":1,"url":"https://img.shields.io/twitter/follow/cnghostwritten?style=social","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"Twitter: cnghostwritten","attributes":{},"skip":false,"key":"1.1.1"},{"backlink":"index.html#fig1.1.2","level":"1.1","list_caption":"Figure: 爱死亡机器人","alt":"爱死亡机器人","nro":2,"url":"https://github.com/Ghostwritten/linux-command-docs/blob/gh-pages/assets/imgs/public.jpg?raw=true","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"爱死亡机器人","attributes":{},"skip":false,"key":"1.1.2"},{"backlink":"Linux-Command/index.html#fig1.2.1","level":"1.2","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":3,"url":"https://img-blog.csdnimg.cn/9afa23d94f0e472cae99dc269ec70ab2.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"Linux-Command/Linux_Command_ab.html#fig1.2.1.1","level":"1.2.1","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":4,"url":"https://img-blog.csdnimg.cn/4d6f0c49b7644840a7e9fd5d22d95d80.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.1.1"},{"backlink":"Linux-Command/Linux_Command_apt.html#fig1.2.3.1","level":"1.2.3","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":5,"url":"https://img-blog.csdnimg.cn/403fbbebe54c4195b3eee17b6ab64188.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.3.1"},{"backlink":"Linux-Command/Linux_Command_apt.html#fig1.2.3.2","level":"1.2.3","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":6,"url":"https://img-blog.csdnimg.cn/f75a130c05ac4ed3b0367ac54a2349a5.webp#pic_center","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.3.2"},{"backlink":"Linux-Command/Linux_Command_awk.html#fig1.2.5.1","level":"1.2.5","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":7,"url":"https://img-blog.csdnimg.cn/e94a6acb70e04d89b39edcc4c295fcea.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.5.1"},{"backlink":"Linux-Command/Linux_Command_cut.html#fig1.2.10.1","level":"1.2.10","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":8,"url":"https://img-blog.csdnimg.cn/3f9909aef33c4218b8400b9d931e99a4.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.10.1"},{"backlink":"Linux-Command/Linux_Command_Date.html#fig1.2.11.1","level":"1.2.11","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":9,"url":"https://img-blog.csdnimg.cn/b9eb2eba04c144e79ac3672fd67ba515.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.11.1"},{"backlink":"Linux-Command/Linux_Command_diff.html#fig1.2.13.1","level":"1.2.13","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":10,"url":"https://img-blog.csdnimg.cn/3d4a795045ee40c98ca47c90dbd2f7a9.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.13.1"},{"backlink":"Linux-Command/Linux_Command_diff.html#fig1.2.13.2","level":"1.2.13","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":11,"url":"https://img-blog.csdnimg.cn/20200507230417936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.13.2"},{"backlink":"Linux-Command/Linux_Command_dnf.html#fig1.2.16.1","level":"1.2.16","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":12,"url":"https://img-blog.csdnimg.cn/6cc06511bf244d3a8e959b975c5d2fee.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.16.1"},{"backlink":"Linux-Command/Linux_Command_dpkg.html#fig1.2.17.1","level":"1.2.17","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":13,"url":"https://img-blog.csdnimg.cn/5884bd78dcbd41dd965db09c02681f32.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.17.1"},{"backlink":"Linux-Command/Linux_Command_dstat.html#fig1.2.18.1","level":"1.2.18","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":14,"url":"https://img-blog.csdnimg.cn/20201009222659633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpeGloYWhhbGVsZWhlaGU=,size_16,color_FFFFFF,t_70#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.18.1"},{"backlink":"Linux-Command/Linux_Command_du.html#fig1.2.19.1","level":"1.2.19","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":15,"url":"https://img-blog.csdnimg.cn/acc6ec7d923847f493f5b686b5f3cf3c.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.19.1"},{"backlink":"Linux-Command/Linux_Command_ebook-convert.html#fig1.2.21.1","level":"1.2.21","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":16,"url":"https://img-blog.csdnimg.cn/b4d5304777df40e09c5072abb4c6f8f6.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.21.1"},{"backlink":"Linux-Command/Linux_Command_fdisk.html#fig1.2.25.1","level":"1.2.25","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":17,"url":"https://img-blog.csdnimg.cn/83979b13d65f4161a5c10ce3fa4b2f0c.jpeg#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.25.1"},{"backlink":"Linux-Command/Linux_Command_find.html#fig1.2.26.1","level":"1.2.26","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":18,"url":"https://img-blog.csdnimg.cn/48d0ec97e4b948238ac68617ac4ee59f.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.26.1"},{"backlink":"Linux-Command/Linux_Command_gpg.html#fig1.2.28.1","level":"1.2.28","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":19,"url":"https://img-blog.csdnimg.cn/3cf048c7a3de44a8b77f238136fbce1e.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.28.1"},{"backlink":"Linux-Command/Linux_Command_gpg.html#fig1.2.28.2","level":"1.2.28","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":20,"url":"https://img-blog.csdnimg.cn/38bf1860b14041b99fbf0aec108bedda.gif#pic_center","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.28.2"},{"backlink":"Linux-Command/Linux_Command_grep.html#fig1.2.29.1","level":"1.2.29","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":21,"url":"https://img-blog.csdnimg.cn/f3c88b12d9ab4d8c98b11bfe261e5c0d.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.29.1"},{"backlink":"Linux-Command/Linux_Command_gzip.html#fig1.2.31.1","level":"1.2.31","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":22,"url":"https://img-blog.csdnimg.cn/343e1a4bc36e47acb6a92c6db49aec62.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.31.1"},{"backlink":"Linux-Command/Linux_Command_jq.html#fig1.2.38.1","level":"1.2.38","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":23,"url":"https://img-blog.csdnimg.cn/310ecb3fa2f84bf984c0adab84c83e80.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.38.1"},{"backlink":"Linux-Command/Linux_Command_lvextend.html#fig1.2.40.1","level":"1.2.40","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":24,"url":"https://img-blog.csdnimg.cn/b099f4089a1f4cd1b1f6d5144abe7895.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.40.1"},{"backlink":"Linux-Command/Linux_Command_lvextend.html#fig1.2.40.2","level":"1.2.40","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":25,"url":"https://img-blog.csdnimg.cn/8880f6f5c32742ce95d83c91ac51c650.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.40.2"},{"backlink":"Linux-Command/Linux_Command_lz4.html#fig1.2.41.1","level":"1.2.41","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":26,"url":"https://img-blog.csdnimg.cn/d57974856682420a90bdb3accb51c1c5.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.41.1"},{"backlink":"Linux-Command/Linux_Command_mount.html#fig1.2.42.1","level":"1.2.42","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":27,"url":"https://img-blog.csdnimg.cn/452528ba84834c7392f5000a2e7a3900.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.42.1"},{"backlink":"Linux-Command/Linux_Command_mount.html#fig1.2.42.2","level":"1.2.42","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":28,"url":"https://img-blog.csdnimg.cn/610090e5de144d528193d6cbc7e7ea52.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.42.2"},{"backlink":"Linux-Command/Linux_Command_mount.html#fig1.2.42.3","level":"1.2.42","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":29,"url":"https://img-blog.csdnimg.cn/01fda885423f44209593449a37d58d69.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.42.3"},{"backlink":"Linux-Command/Linux_Command_mv.html#fig1.2.44.1","level":"1.2.44","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":30,"url":"https://img-blog.csdnimg.cn/52df4bdd0dfd4faebd1922d758ab5507.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.44.1"},{"backlink":"Linux-Command/Linux_Command_namp.html#fig1.2.45.1","level":"1.2.45","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":31,"url":"https://img-blog.csdnimg.cn/d56415a2de524d28958b8b0c68914b4c.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.45.1"},{"backlink":"Linux-Command/Linux_Command_namp.html#fig1.2.45.2","level":"1.2.45","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":32,"url":"https://img-blog.csdnimg.cn/b488204a290b44debc25fb527608a1c1.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.45.2"},{"backlink":"Linux-Command/Linux_Command_nano.html#fig1.2.46.1","level":"1.2.46","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":33,"url":"https://img-blog.csdnimg.cn/3c8ff82a6283459a879fa2ed504295a6.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.46.1"},{"backlink":"Linux-Command/Linux_Command_nano.html#fig1.2.46.2","level":"1.2.46","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":34,"url":"https://img-blog.csdnimg.cn/1ecc4b6796074e03a3d456df67260626.gif#pic_center","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.46.2"},{"backlink":"Linux-Command/Linux_Command_ping.html#fig1.2.54.1","level":"1.2.54","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":35,"url":"https://img-blog.csdnimg.cn/79dfb080b34c40e689960d64752015a0.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.54.1"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.1","level":"1.2.57","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":36,"url":"https://img-blog.csdnimg.cn/9ced35d680764269b04246022bc02b15.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.57.1"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.2","level":"1.2.57","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":37,"url":"https://img-blog.csdnimg.cn/73314173eb4b47fbac363020a315ef9b.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.57.2"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.3","level":"1.2.57","list_caption":"Figure: a产生u更x详细的输出","alt":"a产生u更x详细的输出","nro":38,"url":"https://img-blog.csdnimg.cn/eb857f2418704c89b35832d4e8ae6d9f.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"a产生u更x详细的输出","attributes":{},"skip":false,"key":"1.2.57.3"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.4","level":"1.2.57","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":39,"url":"https://img-blog.csdnimg.cn/1d17b17583d444bb98964da2e390c0d4.png","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.57.4"},{"backlink":"Linux-Command/Linux_Command_ps.html#fig1.2.57.5","level":"1.2.57","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":40,"url":"https://img-blog.csdnimg.cn/95556d10191e47758f59e71b407b9ca8.png","index":5,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.57.5"},{"backlink":"Linux-Command/Linux_Command_rsync.html#fig1.2.63.1","level":"1.2.63","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":41,"url":"https://img-blog.csdnimg.cn/354bb73bca7648a78d9124af56376dc1.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.63.1"},{"backlink":"Linux-Command/Linux_Command_sed.html#fig1.2.66.1","level":"1.2.66","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":42,"url":"https://img-blog.csdnimg.cn/198a1290fb1a4b92a4ae2dcf6cc3877e.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.66.1"},{"backlink":"Linux-Command/Linux_Command_snap.html#fig1.2.67.1","level":"1.2.67","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":43,"url":"https://img-blog.csdnimg.cn/369b0304cf9e4fd2bd9d83bfde8a485c.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.67.1"},{"backlink":"Linux-Command/Linux_Command_snap.html#fig1.2.67.2","level":"1.2.67","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":44,"url":"https://img-blog.csdnimg.cn/55caac914c22430a84081d557d94d334.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.67.2"},{"backlink":"Linux-Command/Linux_Command_snap.html#fig1.2.67.3","level":"1.2.67","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":45,"url":"https://img-blog.csdnimg.cn/3702e85e34a24f6fbcc50e9226d71c1e.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.67.3"},{"backlink":"Linux-Command/Linux_Command_snap.html#fig1.2.67.4","level":"1.2.67","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":46,"url":"https://img-blog.csdnimg.cn/70cd2ce051304af786b014b9b195d8c2.png","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.67.4"},{"backlink":"Linux-Command/Linux_Command_sort.html#fig1.2.68.1","level":"1.2.68","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":47,"url":"https://img-blog.csdnimg.cn/b6c135db4f1a4155a0e306913757c345.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.68.1"},{"backlink":"Linux-Command/Linux_Command_split.html#fig1.2.69.1","level":"1.2.69","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":48,"url":"https://img-blog.csdnimg.cn/c93a5b789b5149449e9ea45e5d354328.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.69.1"},{"backlink":"Linux-Command/Linux_Command_strace.html#fig1.2.73.1","level":"1.2.73","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":49,"url":"https://img-blog.csdnimg.cn/cbb3d8851abd4bfba3fd45e01841ed51.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.73.1"},{"backlink":"Linux-Command/Linux_Command_sysbench.html#fig1.2.75.1","level":"1.2.75","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":50,"url":"https://img-blog.csdnimg.cn/2e32c32b17ae4a81ab71b5ab105b2107.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.75.1"},{"backlink":"Linux-Command/Linux_Command_tar.html#fig1.2.76.1","level":"1.2.76","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":51,"url":"https://img-blog.csdnimg.cn/198d920091864869b38ab6f36b096846.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.76.1"},{"backlink":"Linux-Command/Linux_Command_tc.html#fig1.2.77.1","level":"1.2.77","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":52,"url":"https://img-blog.csdnimg.cn/a847d39afe1145298a5c2ba2a59acd51.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.77.1"},{"backlink":"Linux-Command/Linux_Command_tee.html#fig1.2.79.1","level":"1.2.79","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":53,"url":"https://img-blog.csdnimg.cn/a3de4dde357c4a8a95d3757e47d82e51.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.79.1"},{"backlink":"Linux-Command/Linux_Command_test.html#fig1.2.81.1","level":"1.2.81","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":54,"url":"https://img-blog.csdnimg.cn/2bed06f3da22438c8538d7a8c642129c.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.81.1"},{"backlink":"Linux-Command/Linux_Command_tput.html#fig1.2.83.1","level":"1.2.83","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":55,"url":"https://img-blog.csdnimg.cn/3d7ec0a227da451797729bc917a5f301.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_13,color_FFFFFF,t_70,g_se,x_16","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.83.1"},{"backlink":"Linux-Command/Linux_Command_tput.html#fig1.2.83.2","level":"1.2.83","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":56,"url":"https://img-blog.csdnimg.cn/da271b6d90a54f52b0eb0e8d4f843978.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.83.2"},{"backlink":"Linux-Command/Linux_Command_tput.html#fig1.2.83.3","level":"1.2.83","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":57,"url":"https://img-blog.csdnimg.cn/e15daa51887d4b9c828f498660d85724.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAZ2hvc3R3cml0dGVu,size_19,color_FFFFFF,t_70,g_se,x_16","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.83.3"},{"backlink":"Linux-Command/Linux_Command_tput.html#fig1.2.83.4","level":"1.2.83","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":58,"url":"https://img-blog.csdnimg.cn/237295b1bf174717b906c3b18b9f0790.gif#pic_center","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.83.4"},{"backlink":"Linux-Command/Linux_Command_tr.html#fig1.2.84.1","level":"1.2.84","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":59,"url":"https://img-blog.csdnimg.cn/c2e3e5f4654249688d25423477d0de66.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.84.1"},{"backlink":"Linux-Command/Linux_Command_tree.html#fig1.2.87.1","level":"1.2.87","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":60,"url":"https://img-blog.csdnimg.cn/c852b4a42628403e9f1671ddb1992c14.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.87.1"},{"backlink":"Linux-Command/Linux_Command_uniq.html#fig1.2.88.1","level":"1.2.88","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":61,"url":"https://img-blog.csdnimg.cn/db8aba51539a47adbf85188c2006940b.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.88.1"},{"backlink":"Linux-Command/Linux_Command_vgextend.html#fig1.2.91.1","level":"1.2.91","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":62,"url":"https://img-blog.csdnimg.cn/7467b9e33fb94337b378a539febc9f99.png","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.91.1"},{"backlink":"Linux-Command/Linux_Command_vgextend.html#fig1.2.91.2","level":"1.2.91","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":63,"url":"https://img-blog.csdnimg.cn/2d1be94f5b414a349bc6936f2675c9ad.png","index":2,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.91.2"},{"backlink":"Linux-Command/Linux_Command_vgextend.html#fig1.2.91.3","level":"1.2.91","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":64,"url":"https://img-blog.csdnimg.cn/b4c7b8d5ee62422990fa1ef6ad19c960.png","index":3,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.91.3"},{"backlink":"Linux-Command/Linux_Command_vgextend.html#fig1.2.91.4","level":"1.2.91","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":65,"url":"https://img-blog.csdnimg.cn/d2a2fe0fd5034c509e9164457d9625c7.png","index":4,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.91.4"},{"backlink":"Linux-Command/Linux_Command_xargs.html#fig1.2.96.1","level":"1.2.96","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":66,"url":"https://img-blog.csdnimg.cn/02ed68580d694883901d7c2c866af945.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.96.1"},{"backlink":"Linux-Command/Linux_Command_zip.html#fig1.2.97.1","level":"1.2.97","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":67,"url":"https://img-blog.csdnimg.cn/0f5e605ef19b48e294135941117e3fa3.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.97.1"},{"backlink":"Linux-Command/Linux-Command_Printf.html#fig1.2.98.1","level":"1.2.98","list_caption":"Figure: 在这里插入图片描述","alt":"在这里插入图片描述","nro":68,"url":"https://img-blog.csdnimg.cn/5b0047b571ad45dfa8f78c8009cb5887.gif#pic_center","index":1,"caption_template":"图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_","label":"在这里插入图片描述","attributes":{},"skip":false,"key":"1.2.98.1"}]},"title":"Linux Command Docs","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":"https://twitter.com/cnghostwritten","weibo":null},"sidebar":{"Docker":"https://smoothies.com.cn/docker-docs/Overview.html","Blog":"https://smoothies.com.cn","Kubernetes":"https://smoothies.com.cn/kubernetes-docs/Overview.html","Go":"https://smoothies.com.cn/go-docs/Overview.html","Prometheus":"https://smoothies.com.cn/prometheus-docs/Overview.html","Command":"https://smoothies.com.cn/linux-command-docs/Overview.html","Shell":"https://smoothies.com.cn/shell-docs/Overview.html","Linux":"https://smoothies.com.cn/linux-docs/Overview.html","Gitbook":"https://smoothies.com.cn/gitbook-docs/Overview.html","Python":"https://smoothies.com.cn/python-docs/Overview.html","Exam":"https://ghostwritten.gitbook.io/kubernetes-exam-in-action/"}},"gitbook":"*","description":"这是一本关于 Linux Command 的书籍"},"file":{"path":"Linux-Command/Linux_Command_perf.md","mtime":"2022-06-23T17:16:20.031Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-14T08:05:05.559Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

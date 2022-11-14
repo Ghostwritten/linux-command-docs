@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Linux Command Docs]]></title>
+        <description><![CDATA[This is the best book ever.]]></description>
+        <link>https://smoothies.com.cn/gitbook-docs/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 14 Nov 2022 08:05:39 GMT</lastBuildDate>
+        <atom:link href="http://smoothies.com.cn/rss" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Zong Xun]]></author>
+        <managingEditor><![CDATA[writer@smoothies.com.cn (Zong Xun)]]></managingEditor>
+        <webMaster><![CDATA[webmaster@smoothies.com.cn (Zong Xun)]]></webMaster>
+        <category><![CDATA[linux-command]]></category>
+        <item>
+            <title><![CDATA[序言]]></title>
+            <description><![CDATA[这是一本关于集合 Linux Comand 的书。]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command 介绍]]></title>
+            <description><![CDATA[Linux在桌面上的全球市场份额为 2.68%，但超过 90% 的所有云基础设施和托管服务都在此操作系统中运行。仅出于这个原因，熟悉流行的Linux命令就至关重要。]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/README.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/README.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[linux Command ab 网站性能压力测试工具]]></title>
+            <description><![CDATA[tags: 测试]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ab.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ab.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command Alias 别名]]></title>
+            <description><![CDATA[tags: 系统设置]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_Alias.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_Alias.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command apt 软件包管理]]></title>
+            <description><![CDATA[tags: 软件包管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_apt.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_apt.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command arp 地址转换协议]]></title>
+            <description><![CDATA[tags: 网络,协议]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_arp.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_arp.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command awk 文本匹配]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_awk.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_awk.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command BCC 性能监视、网络动态跟踪工具]]></title>
+            <description><![CDATA[tags: 监控, 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_bcc.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_bcc.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux command chcon 修改文件安全上下文]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_chcon.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_chcon.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command cmp 文件比较]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_cmp.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_cmp.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[linux Command curl]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_curl.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_curl.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command cut 切割]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_cut.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_cut.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command date 显示时间]]></title>
+            <description><![CDATA[tags: 系统设置]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_Date.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_Date.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command dd]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dd.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dd.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command  diff 文件比较]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_diff.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_diff.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command dig 查询DNS]]></title>
+            <description><![CDATA[dig，和nslookup作用有些类似，都是DNS查询工具]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dig.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dig.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command dmsetup管理LVM]]></title>
+            <description><![CDATA[tags: 设备管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dmsetup.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dmsetup.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command dnf 软件包管理]]></title>
+            <description><![CDATA[tags: 软件包管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dnf.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dnf.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command dpkg 软件包管理]]></title>
+            <description><![CDATA[tags: 软件包管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dpkg.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dpkg.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command dstat 性能分析]]></title>
+            <description><![CDATA[tags: 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dstat.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_dstat.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command du 查看文件大小]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_du.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_du.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command e2fsck]]></title>
+            <description><![CDATA[tags: 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_e2fsck.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_e2fsck.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Commnad ebook-convert 转换电子书]]></title>
+            <description><![CDATA[tags: 文本管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ebook-convert.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ebook-convert.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command echo]]></title>
+            <description><![CDATA[tags: 文本处理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_echo.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_echo.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command egrep]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_egrep.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_egrep.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command emacs 文本编辑器]]></title>
+            <description><![CDATA[tags: 编辑器]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_emacs.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_emacs.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command fdisk]]></title>
+            <description><![CDATA[tags: lvm]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_fdisk.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_fdisk.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command find 查找匹配]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_find.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_find.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command fio测试磁盘io工具]]></title>
+            <description><![CDATA[tags: 测试]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_fio.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_fio.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command gpg 加密]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_gpg.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_gpg.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command grep]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_grep.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_grep.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command groupadd 、groupdel、groupmod]]></title>
+            <description><![CDATA[tags: 用户管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_group.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_group.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command gzip 压缩]]></title>
+            <description><![CDATA[tags: 文件管理, 压缩解压]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_gzip.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_gzip.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command hping3 测试网络安全工具]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_hping3.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_hping3.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command iostat 监控IO负载]]></title>
+            <description><![CDATA[tags: 监控, 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_iostat.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_iostat.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command ip]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ip.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ip.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command iperf3网络测速工具]]></title>
+            <description><![CDATA[tags: 网络,测试]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_iperf3.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_iperf3.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command ipmitool]]></title>
+            <description><![CDATA[tags: 设备管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ipmitool.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ipmitool.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Commnad iptables 防火墙]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_iptables.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_iptables.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command jq 格式转换]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_jq.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_jq.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command losetup 设置循环设备]]></title>
+            <description><![CDATA[tags: 设备管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_losetup.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_losetup.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux command lvextend 扩展逻辑卷设备]]></title>
+            <description><![CDATA[tags: 设备]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_lvextend.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_lvextend.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command lz4 压缩]]></title>
+            <description><![CDATA[tags: 文件管理,压缩解压]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_lz4.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_lz4.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command mount 挂载]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_mount.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_mount.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[linux Command mpstat 实时系统监控工具]]></title>
+            <description><![CDATA[tags: 分析, 监控]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_mpstat.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_mpstat.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command mv 文件移动]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_mv.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_mv.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command nmap 网络扫描]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_namp.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_namp.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command Nano 编辑器]]></title>
+            <description><![CDATA[tags: 编辑器]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_nano.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_nano.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command ncat]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ncat.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ncat.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command Nethogs 查看进程占用带宽]]></title>
+            <description><![CDATA[Nethogs 是一个终端下的网络流量监控工具可以直观的显示每个进程占用的带宽。
+下载：http://sourceforge.net/projects/nethogs/files/nethogs/0.8/nethogs-0.8.0.tar.gz/download]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_Nethogs.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_Nethogs.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command netstat 统计网络数据]]></title>
+            <description><![CDATA[tags: 监控, 分析, 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_netstat.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_netstat.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[linux Command nsenter]]></title>
+            <description><![CDATA[tags: 容器]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_nsenter.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_nsenter.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command passwd、gpasswd]]></title>
+            <description><![CDATA[tags: 用户管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_passwd.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_passwd.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command Perf 性能剖析]]></title>
+            <description><![CDATA[tags: 分析,性能]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_perf.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_perf.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command pidstat 监控工具]]></title>
+            <description><![CDATA[tags: 分析, 监控]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_pidstat.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_pidstat.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command ping]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ping.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ping.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command pmap 测试进程内存映射工具]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_pmap.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_pmap.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command popd]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_popd.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_popd.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command ps 性能分析]]></title>
+            <description><![CDATA[tags: 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ps.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ps.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command pstree 显示进程树状图]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_pstree.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_pstree.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command pushd]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_pushd.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_pushd.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command read]]></title>
+            <description><![CDATA[tags: 文本管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_read.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_read.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command route 路由]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_route.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_route.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command rpm 软件包管理]]></title>
+            <description><![CDATA[tags: 软件包管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_rpm.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_rpm.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command rsync 远程同步]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_rsync.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_rsync.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command sar 网卡流量]]></title>
+            <description><![CDATA[tags: 网络, 监控]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sar.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sar.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command screen 后台运行]]></title>
+            <description><![CDATA[tags: 系统管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_screen.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_screen.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command sed 文本处理]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sed.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sed.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command snap 软件包管理]]></title>
+            <description><![CDATA[tags: 软件包管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_snap.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_snap.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[linux Command sort 排序]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sort.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sort.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command split 切割文件]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_split.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_split.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command ss]]></title>
+            <description><![CDATA[tags: 网络, 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ss.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ss.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command ssh-keyscan]]></title>
+            <description><![CDATA[tags: 远程]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ssh-keyscan.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_ssh-keyscan.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command sshpass 远程主机]]></title>
+            <description><![CDATA[tags: 远程]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sshpass.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sshpass.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command strace 调试跟踪]]></title>
+            <description><![CDATA[tags: 分析,进程]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_strace.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_strace.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command stress 进程压力测试工具]]></title>
+            <description><![CDATA[tags: 测试,进程]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_stress.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_stress.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[linux Command sysbench 线程压力测试工具]]></title>
+            <description><![CDATA[tags: 测试]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sysbench.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_sysbench.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command tar 压缩]]></title>
+            <description><![CDATA[tags: 文件管理,压缩解压]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tar.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tar.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command tc 模拟网络延迟和丢包]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tc.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tc.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command tcpdump 抓包工具]]></title>
+            <description><![CDATA[tags: 监控, 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tcpdump.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tcpdump.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command tee]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tee.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tee.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command telnet]]></title>
+            <description><![CDATA[tags: 网络]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_telnet.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_telnet.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command test]]></title>
+            <description><![CDATA[tags: shell]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_test.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_test.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command touch 创建文件]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_touch.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_touch.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command tput 终端操作]]></title>
+            <description><![CDATA[tags: 编辑器]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tput.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tput.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command tr 过滤]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tr.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tr.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command traceroute 路由追踪]]></title>
+            <description><![CDATA[tags: 网络, 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_traceroute.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_traceroute.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command trap 信号捕捉]]></title>
+            <description><![CDATA[信号捕捉 trap，它用于捕获指定的信号并执行预定义的命令。比如，按Ctrl+C会使脚本终止执行，实际上系统发送了SIGINT信号给脚本进程，SIGINT信号的默认处理方式就是退出程序。如果要在Ctrl +C不退出程序，那么就得使用trap命令来指定一下SIGINT的处理方式了。trap命令不仅仅处理Linux信号，还能对脚本退出（EXIT）、调试（DEBUG）、错误（ERR）、返回（RETURN）等情况指定处理方式。]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_trap.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_trap.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command tree 树状图]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tree.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_tree.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command uniq]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_uniq.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_uniq.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command uptime 系统负载]]></title>
+            <description><![CDATA[tags: 分析, 监控]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_uptime.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_uptime.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[linux Command useradd、usermod、userdel]]></title>
+            <description><![CDATA[tags: 用户管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_user.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_user.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command vgextend 扩展卷组]]></title>
+            <description><![CDATA[tags: 设备]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_vgextend.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_vgextend.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command vim 文本编辑器]]></title>
+            <description><![CDATA[tags: 编辑器]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_vim.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_vim.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command vmstat 监控内存]]></title>
+            <description><![CDATA[tags: 监控, 分析]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_vmstat.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_vmstat.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command who、whois、whoami]]></title>
+            <description><![CDATA[tags: 用户管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_who.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_who.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Commnad wrk HTTP 性能测试工具]]></title>
+            <description><![CDATA[tags: 测试]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_wrk.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_wrk.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command xargs]]></title>
+            <description><![CDATA[xargs命令是给其他命令传递参数的一个过滤器，也是组合多个命令的一个工具。]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_xargs.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_xargs.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command zip 压缩]]></title>
+            <description><![CDATA[tags: 压缩解压]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_zip.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux_Command_zip.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command printf  输出]]></title>
+            <description><![CDATA[tags: 文件管理]]></description>
+            <link>https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux-Command_Printf.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Linux-Command/Linux-Command_Printf.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command Docs]]></title>
+            <link>https://smoothies.com.cn/gitbook-docs/About.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/About.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Linux Command Docs]]></title>
+            <link>https://smoothies.com.cn/gitbook-docs/Overview.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/Overview.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Tags]]></title>
+            <link>https://smoothies.com.cn/gitbook-docs/tags.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/gitbook-docs/tags.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+    </channel>
+</rss>
